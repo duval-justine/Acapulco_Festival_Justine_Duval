@@ -1,9 +1,9 @@
 <template>
     <div class="relative">
-        <img class="absolute w-full object-cover" src="../../public/images/prog_img1.webp" alt="">
-        <h1 class="absolute mt-16 mr-5 font-concert-one text-Extended/true-gray/50 text-3xl">Programmes</h1>
+        <img class="absolute opacity-50 w-full object-cover" src="../../public/images/prog_img1.webp" alt="">
+        <h1 class="absolute mt-16 ml-5  font-concert-one text-Extended/true-gray/50 text-3xl">Programmes</h1>
     </div>
-    <div class="mt-40 flex gap-2 absolute">
+    <div class="mt-40 ml-5 flex gap-2 absolute">
         <Bouton
         texte="All"
         lien="/progall"/>
