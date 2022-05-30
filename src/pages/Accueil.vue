@@ -31,15 +31,18 @@
     texte="Formulaire de Contact"
     lien="/" />
 </div>
-
 </main>
+<footer class="bg-Extended/true-gray/900">
+    <Footer/>
+</footer>
 </template>
 
 <script>
 import Header from '../components/Header.vue'
 import VignetteCarrousel from '../components/CarrouselAcc.vue'
 import Bouton from '../components/Bouton.vue'
+import Footer from '../components/Footer.vue'
 export default {
-    components: {Header, Bouton, VignetteCarrousel}
+    components: {Header, Bouton, VignetteCarrousel, Footer}
 }
 </script>
