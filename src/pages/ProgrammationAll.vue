@@ -14,7 +14,8 @@
                     <Vignette class="ml-4 shrink-0"
                     image="/images/prog_mg.webp"
                     nom="Martin Garrix"
-                    date="Samedi 9 juillet - 23h30 à 3h00"/>
+                    date="Samedi 9 juillet - 23h30 à 3h00"
+                    lien="/concertmg"/>
                 </div>
                 <div class="snap-center shrink-0 first:pl-5 last:pr-5">
                     <Vignette class="ml-4 shrink-0"
