@@ -1,5 +1,5 @@
 <template>
-    <div class="flex justify-between my-3 max-h-10">
+    <div class="flex justify-between py-3 max-h-10">
         <RouterLink to="/">
             <Logo class="ml-8 relative z-40"/>
         </RouterLink>
