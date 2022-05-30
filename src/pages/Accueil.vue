@@ -58,7 +58,7 @@
 <div>
     <h4 class="ml-11 mt-12 font-lato text-Extended/true-gray/50 text-sm drop-shadow-xl">Une question ?</h4>
     <p class="mx-11 mt-4 font-lato text-Extended/true-gray/50 text-[12px]">Vous avez une question  ou vous désirez nous faire part d’une suggestion ? N’hésitez pas à laisser votre message dans ce formulaire de contact. </p>
-    <Bouton
+    <Bouton class="flex justify-end mr-5"
     texte="Formulaire de Contact"
     lien="/" />
 </div>
