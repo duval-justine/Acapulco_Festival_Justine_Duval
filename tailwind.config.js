@@ -30,7 +30,7 @@ module.exports = {
         "5xl": "4.5rem"
        },
        "fontFamily": {
-        "harlow": "Harlow",
+        "lato": "Lato",
         "concert-one": "Concert One"
        },
        "borderRadius": {
