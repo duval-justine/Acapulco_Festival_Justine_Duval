@@ -14,33 +14,32 @@
             <div class="carousel-item relative float-left w-full">
                 <VignetteCarrousel class="block w-full"
                 image="/images/acc_carrousel2.webp"
-                texte="Samedi 9 juillet"
+                texte="Vendredi 8 & Samedi 9 juillet"
                 />
             </div>
             <div class="carousel-item relative float-left w-full">
                 <VignetteCarrousel class="block w-full"
                 image="/images/acc_carrousel3.webp"
-                texte="Samedi 9 juillet"
+                texte="Jeudi 7 juillet"
                 />
             </div>
              <div class="carousel-item relative float-left w-full">
                 <VignetteCarrousel class="block w-full"
                 image="/images/acc_carrousel4.webp"
-                texte="Samedi 9 juillet"
+                texte="Samedi 9 & Dimanche 10 juillet"
                 />
             </div>
              <div class="carousel-item relative float-left w-full">
                 <VignetteCarrousel class="block w-full"
                 image="/images/acc_carrousel5.webp"
-                texte="Samedi 9 juillet"
+                texte="Jeudi 7 & Samedi 9 juillet"
                 />
             </div>
         </div>
     </div>
-   
-<button class="w-full">
-    <p class="py-3 font-lato text-Extended/true-gray/50 text-xl text-center drop-shadow-md">Toute la programmation</p>
-</button>
+   <RouterLink to="/progall" class="w-full">
+         <p class="py-3 font-lato text-Extended/true-gray/50 text-xl text-center drop-shadow-md">Toute la programmation</p>
+   </RouterLink>
 </div>
 <p class="mx-8 mt-16 mb-8 font-lato text-Extended/true-gray/50 text-sm">Le Jeudi 7 juillet 2022, le festival Acapul’co vous ouvre ses portes pour vous offrir un Festival grandiose ! Venez en famille ou entre amis pour s’amuser et vivre des moments inoubliables. Le festival propose cette année, une édition sur 4 jours avec une programmation de 23 artistes du monde entier.  Qu’attendez vous ? Que la fête commence !</p>
     <Bouton class="flex justify-end mr-5"
@@ -58,7 +57,7 @@
 <div>
     <h4 class="ml-11 mt-12 font-lato text-Extended/true-gray/50 text-sm drop-shadow-xl">Une question ?</h4>
     <p class="mx-11 mt-4 font-lato text-Extended/true-gray/50 text-[12px]">Vous avez une question  ou vous désirez nous faire part d’une suggestion ? N’hésitez pas à laisser votre message dans ce formulaire de contact. </p>
-    <Bouton class="flex justify-end mr-5"
+    <Bouton class="flex justify-end mt-6 pb-12 mr-5"
     texte="Formulaire de Contact"
     lien="/" />
 </div>
