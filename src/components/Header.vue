@@ -14,17 +14,17 @@
       :class="{ 'translate-x-0': menuOuvert }">
         <div class="flex flex-row justify-between">
           <button class="relative z-60 mt-52" aria-haspopup="true" aria-controls="menu" :aria-expanded="menuOuvert" @click="menuOuvert = !menuOuvert">
-            <MenuIcon :class="{'motion-safe:animate-[BackInRight_1s_cubic-bezier(0,1,.24,1)]' : menuOuvert}"/>
+            <XIcon :class="{'motion-safe:animate-[BackInRight_1s_cubic-bezier(0,1,.24,1)]' : menuOuvert}"/>
           </button>
         </div>
 
         <nav>
-          <ul class="flex flex-col text-center gap-9  font-medium text-xl">
+          <ul class="flex flex-col text-center gap-10 font-concert-one text-Extended/true-gray/50 text-3xl">
            <RouterLink :class="{' motion-safe:animate-[Depart_0.05s_cubic-bezier(.5,.5,.5,.5)]' : menuOuvert}" to="/">Accueil</RouterLink>
-           <RouterLink :class="{' motion-safe:animate-[Depart_0.1s_cubic-bezier(.5,.5,.5,.5)]' : menuOuvert}" to="../conseileco">Conseils Écologiques</RouterLink>
-           <RouterLink :class="{' motion-safe:animate-[Depart_0.2s_cubic-bezier(.5,.5,.5,.5)]' : menuOuvert}" to="../newsletter">Newsletter</RouterLink>
-           <RouterLink :class="{' motion-safe:animate-[Depart_0.3s_cubic-bezier(.5,.5,.5,.5)]' : menuOuvert}" to="../NousContacter">Nous contacter</RouterLink>
-           <RouterLink :class="{' motion-safe:animate-[Depart_0.4s_cubic-bezier(.5,.5,.5,.5)]' : menuOuvert}" to="../Conseilramassage">Ramassage des déchets</RouterLink>
+           <RouterLink :class="{' motion-safe:animate-[Depart_0.1s_cubic-bezier(.5,.5,.5,.5)]' : menuOuvert}" to="/progall">Programmes</RouterLink>
+           <RouterLink :class="{' motion-safe:animate-[Depart_0.2s_cubic-bezier(.5,.5,.5,.5)]' : menuOuvert}" to="/">Artistes</RouterLink>
+           <RouterLink :class="{' motion-safe:animate-[Depart_0.3s_cubic-bezier(.5,.5,.5,.5)]' : menuOuvert}" to="/">Festival</RouterLink>
+           <RouterLink :class="{' motion-safe:animate-[Depart_0.4s_cubic-bezier(.5,.5,.5,.5)]' : menuOuvert}" to="/">Contact</RouterLink>
           </ul>
         </nav>
       </div>
@@ -32,10 +32,10 @@
 
 <script>
 import Logo from './icons/LogoFestival.vue'
-import {MenuIcon} from '@heroicons/vue/outline'
+import {MenuIcon, XIcon} from '@heroicons/vue/outline'
 
 export default {
-    components: {Logo, MenuIcon},
+    components: {Logo, MenuIcon, XIcon},
 
     data() {
         return {
