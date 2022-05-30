@@ -1,7 +1,7 @@
 <template>
 <main class="bg-Extended/true-gray/900">
 <Header class="z-10 relative" />
-<img class="-mt-[85px] w-full object-cover" src="../../public/images/acc_fond.webp" alt="">
+<img class="-mt-[85px] max-h-[812px] min-h-[812px] w-full object-cover" src="../../public/images/acc_fond.webp" alt="">
 <div class="bg-Extended/amber/500 pt-14">
     <div id="carouselExampleSlidesOnly" class="carousel slide relative" data-bs-ride="carousel">
         <div class="carousel-inner relative w-full overflow-hidden">
