@@ -1,6 +1,7 @@
 <template>
-  <RouterLink to="/">{{name}}</RouterLink>
+
   <RouterView />
+  
 </template>
 
 <script>
