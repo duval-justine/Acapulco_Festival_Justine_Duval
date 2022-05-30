@@ -5,7 +5,7 @@
         </RouterLink>
         <button class="relative z-40 text-xl" aria-haspopup="true" aria-controls="menu" :aria-expanded="menuOuvert" @click="menuOuvert = !menuOuvert">
             <div>
-              <MenuIcon class="mr-8 text-Extended/true-gray/50 w-14" :class="{'hidden' : menuOuvert}" />
+              <MenuIcon class="mt-4 mr-8 text-Extended/true-gray/50 w-10" :class="{'hidden' : menuOuvert}" />
             </div>
             <span class="sr-only">Menu</span>
         </button>
