@@ -1,12 +1,12 @@
 <template>
-    <div class="flex justify-between py-3 max-h-10">
-        <a href="javascript:history.back()"><ArrowLeftIcon class="text-Extended/true-gray/50 ml-8 mt-4 w-10"/></a>
+    <div class="flex justify-between py-3 max-h-10 ">
+        <a href="javascript:history.back()"><ArrowLeftIcon class="relative text-Extended/true-gray/50 ml-8 mt-4 w-10 z-30"/></a>
         <RouterLink to="/">
             <Logo class=" relative z-30"/>
         </RouterLink>
         <button class="relative z-40 text-xl" aria-haspopup="true" aria-controls="menu" :aria-expanded="menuOuvert" @click="menuOuvert = !menuOuvert">
             <div>
-              <MenuIcon class="mt-4 mr-8 text-Extended/true-gray/50 w-10" :class="{'hidden' : menuOuvert}" />
+              <MenuIcon class="relative mt-4 mr-8  text-Extended/true-gray/50 w-10" :class="{'hidden' : menuOuvert}" />
             </div>
             <span class="sr-only">Menu</span>
         </button>
