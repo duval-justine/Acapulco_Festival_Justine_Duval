@@ -1,5 +1,5 @@
 <template>
-    <div class="flex justify-between my-3 ">
+    <div class="flex justify-between my-3 max-h-10">
         <Logo class="ml-8"/>
         <MenuIcon class="mr-8 text-Extended/true-gray/50 w-14"/>
     </div>
