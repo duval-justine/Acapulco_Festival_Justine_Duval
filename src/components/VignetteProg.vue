@@ -1,5 +1,5 @@
 <template>
-    <div class="mt-[223px] w-[270px] h-[256px] relative">
+    <div class="mt-8 w-[270px] h-[256px] relative">
         <img class="absolute opacity-80 w-full object-cover rounded-xl" :src="image" alt="">
         <div>
             <p class="absolute mt-[214px] ml-3 text-[10px] font-lato font-semibold text-left text-Extended/amber/300 ">{{date}}</p>
