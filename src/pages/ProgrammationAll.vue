@@ -141,7 +141,7 @@
                 <h4 class="ml-6 font-lato text-[12px] text-Extended/true-gray/50">Nos jeunes artistes</h4>
                 <Line class="mt-2"/>
             </div>
-            <div class="w-full flex gap-5 snap-x overflow-x-auto">
+            <div class="w-full flex gap-5 snap-x overflow-x-auto pb-12">
                 <div class="snap-center shrink-0 first:pl-5 last:pr-5">
                     <Vignette class="ml-4 shrink-0"
                     image="/images/prog_eluize.webp"
@@ -192,6 +192,9 @@
                 </div>
             </div>
         </main>
+        <footer class="bg-Extended/true-gray/900">
+        <Footer/>
+        </footer>
     </div>
 </template>
 <script>
@@ -199,8 +202,9 @@ import Header from '../components/Header.vue'
 import Entete from '../components/EnteteProg.vue'
 import Vignette from '../components/VignetteProg.vue'
 import Line from '../components/icons/Line.vue'
+import Footer from '../components/Footer.vue'
 
 export default {
-    components: {Header, Entete, Vignette, Line}
+    components: {Header, Entete, Vignette, Line, Footer}
 }
 </script>
