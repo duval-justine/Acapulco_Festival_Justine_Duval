@@ -1,18 +1,49 @@
 <template>
 <main class="bg-Extended/true-gray/900">
-<Header class="z-10" />
-<img class="-z-10 -mt-[85px] w-full object-cover" src="../../public/images/acc_fond.webp" alt="">
+<Header class="z-10 relative" />
+<img class="-mt-[85px] w-full object-cover" src="../../public/images/acc_fond.webp" alt="">
 <div class="bg-Extended/amber/500 pt-14">
-    <VignetteCarrousel
-    image="/images/acc_carrousel1.webp"
-    texte="Samedi 9 juillet"
-    />
-<button>
-    <p class="px-[60px] py-3 font-lato text-Extended/true-gray/50 text-xl text-center drop-shadow-md">Toute la programmation</p>
+    <div id="carouselExampleSlidesOnly" class="carousel slide relative" data-bs-ride="carousel">
+        <div class="carousel-inner relative w-full overflow-hidden">
+            <div class="carousel-item active relative float-left w-full">
+                 <VignetteCarrousel class="block w-full"
+                image="/images/acc_carrousel1.webp"
+                texte="Samedi 9 juillet"
+                />
+            </div>
+            <div class="carousel-item relative float-left w-full">
+                <VignetteCarrousel class="block w-full"
+                image="/images/acc_carrousel2.webp"
+                texte="Samedi 9 juillet"
+                />
+            </div>
+            <div class="carousel-item relative float-left w-full">
+                <VignetteCarrousel class="block w-full"
+                image="/images/acc_carrousel3.webp"
+                texte="Samedi 9 juillet"
+                />
+            </div>
+             <div class="carousel-item relative float-left w-full">
+                <VignetteCarrousel class="block w-full"
+                image="/images/acc_carrousel4.webp"
+                texte="Samedi 9 juillet"
+                />
+            </div>
+             <div class="carousel-item relative float-left w-full">
+                <VignetteCarrousel class="block w-full"
+                image="/images/acc_carrousel5.webp"
+                texte="Samedi 9 juillet"
+                />
+            </div>
+        </div>
+    </div>
+   
+<button class="w-full">
+    <p class="py-3 font-lato text-Extended/true-gray/50 text-xl text-center drop-shadow-md">Toute la programmation</p>
 </button>
 </div>
 <p class="mx-8 mt-16 mb-8 font-lato text-Extended/true-gray/50 text-sm">Le Jeudi 7 juillet 2022, le festival Acapul’co vous ouvre ses portes pour vous offrir un Festival grandiose ! Venez en famille ou entre amis pour s’amuser et vivre des moments inoubliables. Le festival propose cette année, une édition sur 4 jours avec une programmation de 23 artistes du monde entier.  Qu’attendez vous ? Que la fête commence !</p>
-    <Bouton 
+    <Bouton class="flex justify-end mr-5"
     texte="En savoir plus sur le Festival"
     lien="/"/>
 
