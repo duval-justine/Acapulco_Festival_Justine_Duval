@@ -1,19 +1,19 @@
 <template>
     <div class="flex justify-between py-3 max-h-10">
         <RouterLink to="/">
-            <Logo class="ml-8 relative z-40"/>
+            <Logo class="ml-8 relative z-30"/>
         </RouterLink>
-        <button class="relative z-50 text-xl" aria-haspopup="true" aria-controls="menu" :aria-expanded="menuOuvert" @click="menuOuvert = !menuOuvert">
+        <button class="relative z-40 text-xl" aria-haspopup="true" aria-controls="menu" :aria-expanded="menuOuvert" @click="menuOuvert = !menuOuvert">
             <div>
               <MenuIcon class="mr-8 text-Extended/true-gray/50 w-14" :class="{'hidden' : menuOuvert}" />
             </div>
             <span class="sr-only">Menu</span>
         </button>
     </div>
-    <div id="menu" class="z-50 fixed inset-0 translate-x-full bg-Extended/true-gray/900 motion-safe:duration-1000 motion-safe:transition-transform" v-if="menuOuvert"
+    <div id="menu" class="z-40 fixed inset-0 translate-x-full bg-Extended/true-gray/900 motion-safe:duration-1000 motion-safe:transition-transform" v-if="menuOuvert"
       :class="{ 'translate-x-0': menuOuvert }">
-        <div class="flex flex-row justify-between">
-          <button class="relative z-60 mt-52" aria-haspopup="true" aria-controls="menu" :aria-expanded="menuOuvert" @click="menuOuvert = !menuOuvert">
+        <div class="flex flex-row justify-between relative z-50">
+          <button class="mt-52 text-Extended/true-gray/50" aria-haspopup="true" aria-controls="menu" :aria-expanded="menuOuvert" @click="menuOuvert = !menuOuvert">
             <XIcon :class="{'motion-safe:animate-[BackInRight_1s_cubic-bezier(0,1,.24,1)]' : menuOuvert}"/>
           </button>
         </div>
@@ -42,6 +42,9 @@ export default {
           menuOuvert: false,
         };
       },
+    beforeMount(){
+    this.$router.afterEach(() => (this.menuOuvert = false));
+    }
 }
 
 </script>
