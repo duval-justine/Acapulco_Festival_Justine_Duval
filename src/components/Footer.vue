@@ -10,9 +10,9 @@
         <RouterLink to="/">Mentions Légales</RouterLink>
         <RouterLink to="/">Contact</RouterLink>
     </div>
-    <div class="-mt-[134px] flex justify-between">
-        <DecoBG class="-ml-10" />
-        <DecoBD class="-mr-10"/>
+    <div class=" flex justify-between">
+        <DecoBG class=""/>
+        <DecoBD class=""/>
     </div>
 </template>
 
