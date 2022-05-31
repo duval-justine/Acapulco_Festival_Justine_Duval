@@ -20,7 +20,7 @@
         <p class="py-2 px-3 font-lato text-[12px] text-Extended/true-gray/50 drop-shadow-md md:text-base lg:text-lg">Jeudi</p>
       </button>
     </RouterLink>
-    <RouterLink to="/">
+    <RouterLink to="/progvendredi">
       <button
         class="rounded-lg border-2 border-Extended/amber/500 bg-Extended/true-gray/900 drop-shadow-md"
         :class="{ 'bg-Extended/amber/500': actif3 }"
