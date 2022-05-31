@@ -1,18 +1,40 @@
 <template>
-    <div class="pt-8 flex gap-6 justify-center">
-        <Insta/>
-        <Facebook/>
-        <Twitter/>
-        <YouTube/>
+    <div class="md:hidden">
+        <div class="pt-8 flex gap-6 justify-center">
+            <Insta/>
+            <Facebook/>
+            <Twitter/>
+            <YouTube/>
+        </div>
+        <div class="mt-8 flex gap-5 justify-center font-lato text-Extended/true-gray/50 text-xs">
+            <RouterLink to="/festival">Festival</RouterLink>
+            <RouterLink to="/mtnlegales">Mentions Légales</RouterLink>
+            <RouterLink to="/">Contact</RouterLink>
+        </div>
+        <div class=" flex justify-between">
+            <DecoBG />
+            <DecoBD />
+        </div>
     </div>
-    <div class="mt-8 flex gap-5 justify-center font-lato text-Extended/true-gray/50 text-xs">
-        <RouterLink to="/">Festival</RouterLink>
-        <RouterLink to="/mtnlegales">Mentions Légales</RouterLink>
-        <RouterLink to="/">Contact</RouterLink>
-    </div>
-    <div class=" flex justify-between">
-        <DecoBG class=""/>
-        <DecoBD class=""/>
+
+    <!-- Footer IPad et Desktop -->
+    <div class="hidden md:flex">
+        <DecoBG />
+        <div class="flex flex-row justify-center flex-auto gap-52">
+            <div class="mt-8 flex justify-between font-lato text-Extended/true-gray/50 text-sm lg:text-xl">
+                <RouterLink to="/festival">Festival</RouterLink>
+                <RouterLink to="/mtnlegales">Mentions Légales</RouterLink>
+                <RouterLink to="/">Contact</RouterLink>
+            </div>
+            
+            <div class="pt-8 flex gap-6">
+                <Insta/>
+                <Facebook/>
+                <Twitter/>
+                <YouTube/>
+            </div>
+        </div>
+        <DecoBD />
     </div>
 </template>
 
