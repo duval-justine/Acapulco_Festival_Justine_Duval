@@ -5,6 +5,7 @@ import ProgrammationAll from '../pages/ProgrammationAll.vue'
 import ConcertMG from '../pages/ConcertMG.vue'
 import MartinGarrix from '../pages/MartinGarrix.vue'
 import Festival from '../pages/Festival.vue'
+import MentionsLegales from '../pages/MentionsLegales.vue'
 
 const router = createRouter({
     history: createWebHistory(),
@@ -14,6 +15,7 @@ const router = createRouter({
         { path: '/concertmg', name: 'Concert Martin Garrix', component: ConcertMG },
         { path: '/martingarrix', name: 'Artiste Martin Garrix', component: MartinGarrix },
         { path: '/festival', name: 'Festival', component: Festival },
+        { path: '/mtnlegales', name: 'Mentions Légales', component: MentionsLegales },
     ],
 })
 
