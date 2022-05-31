@@ -1,4 +1,7 @@
 <template>
+<!-- Problème à régler : 
+    Les images du lieu à rendre responsive
+-->
     <header>
         <HeaderRetour/>
     </header>
@@ -19,8 +22,8 @@
             <h3 class="font-lato text-sm text-Extended/true-gray/50">Lieu :</h3>
             <p class="mt-2 font-lato text-xs text-Extended/true-gray/50">Scène Pul’co Playa - Plage des Ayguades</p>
             <div class="mt-2 flex justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-[13px]">
-                <img class="flex-grow-0 flex-shrink-0 object-none w-[147px] h-[138px] rounded-[10px]" src="../../public/images/concert_scene1.webp" alt="">
-                <img class="flex-grow-0 flex-shrink-0 object-none w-[147px] h-[138px] rounded-[10px]" src="../../public/images/concert_scene1_carte.webp" alt="">
+                <img class="flex-grow-0 flex-shrink-0 object-cover w-[147px] h-[138px] rounded-[10px]" src="../../public/images/concert_scene1.webp" alt="">
+                <img class="flex-grow-0 flex-shrink-0 object-cover w-[147px] h-[138px] rounded-[10px]" src="../../public/images/concert_scene1_carte.webp" alt="">
             </div>
         </div>
     </main>
