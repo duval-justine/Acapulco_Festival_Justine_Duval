@@ -11,7 +11,7 @@
         <div class="mx-8">
             <h3 class="font-lato text-sm text-Extended/true-gray/50">Description :</h3>
             <p class="mt-2 font-lato text-xs text-Extended/true-gray/50">Martin Garrix est un DJ hollandais né en 1996 à Amsterdam. A l’âge de seulement 16 ans il sort son premier titre “Keygen” qui est un morceau électro dans un style épuré. En 2013, il sort son single “Animals” qui devient célèbre dans la scène de l’électro. </p>
-            <RouterLink to="/" class="mt-2 relative font-lato text-xs text-Extended/amber/500 flex justify-end">
+            <RouterLink to="/martingarrix" class="mt-2 relative font-lato text-xs text-Extended/amber/500 flex justify-end">
              Lire la suite
             </RouterLink>
         </div>
