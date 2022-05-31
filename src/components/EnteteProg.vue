@@ -1,9 +1,9 @@
 <template>
-    <div class="relative z-40 top-0">
+    <div class="relative z-20 top-0">
         <img class="absolute opacity-50 w-full object-cover" src="../../public/images/prog_img1.webp" alt="">
         <h1 class="absolute mt-16 ml-5  font-concert-one text-Extended/true-gray/50 text-3xl">Programmes</h1>
     </div>
-    <div class="-bottom-52 ml-5 flex gap-2 justify-center relative z-50">
+    <div class="-bottom-52 ml-5 flex gap-2 justify-center relative z-20">
         <RouterLink to="/progall" >
         <svg
         width="35"

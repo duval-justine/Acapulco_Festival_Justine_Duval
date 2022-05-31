@@ -1,8 +1,8 @@
 <template>
-    <div class="flex justify-between py-3 max-h-10 ">
+    <div class="flex flex-row justify-between py-3 max-h-10 ">
         <a href="javascript:history.back()"><ArrowLeftIcon class="relative text-Extended/true-gray/50 ml-8 mt-4 w-10 z-30"/></a>
         <RouterLink to="/">
-            <Logo class=" relative z-30"/>
+            <Logo class=" relative z-30 -left-[150px]"/>
         </RouterLink>
         <button class="absolute top-0 right-0 z-50 text-xl" aria-haspopup="true" aria-controls="menu" :aria-expanded="menuOuvert" @click="menuOuvert = !menuOuvert">
             <div >
@@ -13,7 +13,7 @@
             <span class="sr-only">Menu</span>
         </button>
     </div>
-    <div id="menu" class="z-40 fixed inset-0 translate-x-full bg-Extended/true-gray/900 motion-safe:duration-1000 motion-safe:transition-transform h-full" v-if="menuOuvert"
+    <div id="menu" class="z-50 fixed inset-0 translate-x-full bg-Extended/true-gray/900 motion-safe:duration-1000 motion-safe:transition-transform h-full" v-if="menuOuvert"
       :class="{ 'translate-x-0': menuOuvert }">
     
         <div>
