@@ -4,7 +4,8 @@
             <Header/>
         </header>
         <main class="mt-14">
-            <Entete/>
+            <Entete
+            couleur="#F59E0C"/>
             <div class="pt-[223px] flex gap-4">
                 <h4 class="ml-6 font-lato text-[12px] text-Extended/true-gray/50">En tête d'affiche</h4>
                 <Line class="mt-2"/>
