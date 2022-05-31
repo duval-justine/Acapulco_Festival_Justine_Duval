@@ -18,7 +18,9 @@
             <XIcon :class="{'motion-safe:animate-[BackInRight_1s_cubic-bezier(0,1,.24,1)]' : menuOuvert}"/>
           </button>
         </div>
-
+        <div>
+          <DecoBD class="-mt-52"/>
+        </div>
         <nav>
           <ul class="flex flex-col text-center gap-10 font-concert-one text-Extended/true-gray/50 text-3xl">
            <RouterLink :class="{' motion-safe:animate-[Depart_0.05s_cubic-bezier(.5,.5,.5,.5)]' : menuOuvert}" to="/">Accueil</RouterLink>
@@ -28,15 +30,20 @@
            <RouterLink :class="{' motion-safe:animate-[Depart_0.4s_cubic-bezier(.5,.5,.5,.5)]' : menuOuvert}" to="/">Contact</RouterLink>
           </ul>
         </nav>
+        <div >
+          <DecoHG class="ml-auto"/>
+        </div>
       </div>
 </template>
 
 <script>
 import Logo from './icons/LogoFestival.vue'
+import DecoHG from './icons/DecoHG.vue'
+import DecoBD from './icons/DecoBD.vue'
 import {MenuIcon, XIcon, ArrowLeftIcon} from '@heroicons/vue/outline'
 
 export default {
-    components: {Logo, MenuIcon, XIcon, ArrowLeftIcon},
+    components: {Logo, MenuIcon, XIcon, ArrowLeftIcon, DecoHG, DecoBD},
 
     data() {
         return {
