@@ -4,7 +4,7 @@
       <Header />
     </header>
     <main class="mt-14">
-      <Entete couleur="#F59E0C" couleur2="" couleur3="" couleur4="" couleur5="" />
+      <Entete actif />
       <div class="flex gap-4 pt-[223px] lg:pt-[350px]">
         <h4 class="ml-6 font-lato text-[12px] text-Extended/true-gray/50 lg:text-xl">En tête d'affiche</h4>
         <Line class="mt-5" />
@@ -115,6 +115,9 @@
           <div class="shrink-0 snap-center first:pl-5 last:pr-5">
             <Vignette class="ml-4 shrink-0" image="/images/prog_mt.webp" nom="U.R.TRAX" date="Vendredi 8 juillet - 18h00 à 20h00" />
           </div>
+          <div class="shrink-0 snap-center first:pl-5 last:pr-5">
+            <Vignette class="ml-4 shrink-0" image="/images/prog_yuksek.webp" nom="Yuksek" date="Jeudi 7 juillet - 18h00 à 20h00" />
+          </div>
         </div>
       </div>
 
@@ -165,6 +168,7 @@
           <Vignette image="/images/prog_dmw.webp" nom="Mike Williams" date="Jeudi 7 juillet - 23h30 à 3h00" />
           <Vignette image="/images/prog_dsh.webp" nom="Seth Hills" date="Vendredi 8 juillet - 16h00 à 18h00" />
           <Vignette image="/images/prog_durt.webp" nom="U.R.TRAX" date="Vendredi 8 juillet - 18h00 à 20h00" />
+          <Vignette image="/images/prog_dy.webp" nom="Yuksek" date="Jeudi 7 juillet - 18h00 à 20h00" />
         </div>
       </div>
     </main>
