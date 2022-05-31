@@ -30,7 +30,7 @@
           </ul>
         </nav>
         <div >
-          <DecoHG class=""/>
+          <DecoHG class="ml-auto"/>
         </div>
       </div>
 </template>
