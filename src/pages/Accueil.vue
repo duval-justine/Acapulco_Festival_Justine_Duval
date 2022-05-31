@@ -120,8 +120,8 @@
         </div>
 
         <!-- Séparation -->
-       <div class="hidden md:flex">
-           <div class="right-auto mt-10 lg:mt-20">
+       <div class="hidden md:flex justify-between">
+           <div class="mt-10 lg:mt-20 ">
                <Line/>
            </div>
             <Line class="mt-10"/>
@@ -153,8 +153,8 @@
         </div>
 
         <!-- Séparation -->
-       <div class="hidden md:flex">
-           <div class="right-auto mt-10 lg:mt-20">
+       <div class="hidden md:flex justify-between">
+           <div class="mt-10 lg:mt-20">
                <Line/>
            </div>
             <Line class="mt-10"/>
