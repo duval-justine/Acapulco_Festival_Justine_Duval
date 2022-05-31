@@ -4,22 +4,20 @@
         <RouterLink to="/">
             <Logo class=" relative z-30"/>
         </RouterLink>
-        <button class="relative z-40 text-xl" aria-haspopup="true" aria-controls="menu" :aria-expanded="menuOuvert" @click="menuOuvert = !menuOuvert">
-            <div>
-              <MenuIcon class="relative mt-4 mr-8  text-Extended/true-gray/50 w-10" :class="{'hidden' : menuOuvert}" />
+        <button class="absolute top-0 right-0 z-50 text-xl" aria-haspopup="true" aria-controls="menu" :aria-expanded="menuOuvert" @click="menuOuvert = !menuOuvert">
+            <div >
+              <MenuIcon v-if="!menuOuvert" class="mt-4 mr-8 text-Extended/true-gray/50 w-10"  />
+              <XIcon v-else class="mt-4 mr-8 text-Extended/true-gray/50 w-10"  />
+             
             </div>
             <span class="sr-only">Menu</span>
         </button>
     </div>
-    <div id="menu" class="z-40 fixed inset-0 translate-x-full bg-Extended/true-gray/900 motion-safe:duration-1000 motion-safe:transition-transform" v-if="menuOuvert"
+    <div id="menu" class="z-40 fixed inset-0 translate-x-full bg-Extended/true-gray/900 motion-safe:duration-1000 motion-safe:transition-transform h-full" v-if="menuOuvert"
       :class="{ 'translate-x-0': menuOuvert }">
-        <div class="flex flex-row justify-between relative z-50">
-          <button class="mt-52 text-Extended/true-gray/50" aria-haspopup="true" aria-controls="menu" :aria-expanded="menuOuvert" @click="menuOuvert = !menuOuvert">
-            <XIcon :class="{'motion-safe:animate-[BackInRight_1s_cubic-bezier(0,1,.24,1)]' : menuOuvert}"/>
-          </button>
-        </div>
+    
         <div>
-          <DecoBD class="-mt-52"/>
+          <DecoBD/>
         </div>
         <nav>
           <ul class="flex flex-col text-center gap-10 font-concert-one text-Extended/true-gray/50 text-3xl">
