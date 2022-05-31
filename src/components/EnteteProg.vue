@@ -4,11 +4,46 @@
     <h1 class="absolute mt-16 ml-5 font-concert-one text-3xl text-Extended/true-gray/50">Programmes</h1>
   </div>
   <div class="relative -bottom-52 z-20 ml-5 flex justify-center gap-2 md:-bottom-[385px] lg:-bottom-[330px]">
-    <Bouton texte="All" actif />
-    <Bouton texte="Jeudi" />
-    <Bouton texte="Vendredi" />
-    <Bouton texte="Samedi" />
-    <Bouton texte="Dimanche" />
+    <RouterLink to="/progall">
+      <button
+        class="rounded-lg border-2 border-Extended/amber/500 bg-Extended/true-gray/900 drop-shadow-md"
+        :class="{ 'bg-Extended/amber/500': actif }"
+      >
+        <p class="py-2 px-3 font-lato text-[12px] text-Extended/true-gray/50 drop-shadow-md md:text-base lg:text-lg">All</p>
+      </button>
+    </RouterLink>
+    <RouterLink to="/progjeudi">
+      <button
+        class="rounded-lg border-2 border-Extended/amber/500 bg-Extended/true-gray/900 drop-shadow-md"
+        :class="{ 'bg-Extended/amber/500': actif2 }"
+      >
+        <p class="py-2 px-3 font-lato text-[12px] text-Extended/true-gray/50 drop-shadow-md md:text-base lg:text-lg">Jeudi</p>
+      </button>
+    </RouterLink>
+    <RouterLink to="/">
+      <button
+        class="rounded-lg border-2 border-Extended/amber/500 bg-Extended/true-gray/900 drop-shadow-md"
+        :class="{ 'bg-Extended/amber/500': actif3 }"
+      >
+        <p class="py-2 px-3 font-lato text-[12px] text-Extended/true-gray/50 drop-shadow-md md:text-base lg:text-lg">Vendredi</p>
+      </button>
+    </RouterLink>
+    <RouterLink to="/">
+      <button
+        class="rounded-lg border-2 border-Extended/amber/500 bg-Extended/true-gray/900 drop-shadow-md"
+        :class="{ 'bg-Extended/amber/500': actif4 }"
+      >
+        <p class="py-2 px-3 font-lato text-[12px] text-Extended/true-gray/50 drop-shadow-md md:text-base lg:text-lg">Samedi</p>
+      </button>
+    </RouterLink>
+    <RouterLink to="/">
+      <button
+        class="rounded-lg border-2 border-Extended/amber/500 bg-Extended/true-gray/900 drop-shadow-md"
+        :class="{ 'bg-Extended/amber/500': actif5 }"
+      >
+        <p class="py-2 px-3 font-lato text-[12px] text-Extended/true-gray/50 drop-shadow-md md:text-base lg:text-lg">Dimanche</p>
+      </button>
+    </RouterLink>
 
     <!-- <RouterLink to="/progall" >
         <svg
@@ -72,11 +107,11 @@ import Bouton from "../components/Bouton.vue";
 export default {
   components: { Bouton },
   props: {
-    couleur: String,
-    couleur2: String,
-    couleur3: String,
-    couleur4: String,
-    couleur5: String,
+    actif: Boolean,
+    actif2: Boolean,
+    actif3: Boolean,
+    actif4: Boolean,
+    actif5: Boolean,
   },
 };
 </script>
