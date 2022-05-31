@@ -7,7 +7,7 @@
     </div>
     <div class="mt-8 flex gap-5 justify-center font-lato text-Extended/true-gray/50 text-xs">
         <RouterLink to="/">Festival</RouterLink>
-        <RouterLink to="/">Mentions Légales</RouterLink>
+        <RouterLink to="/mtnlegales">Mentions Légales</RouterLink>
         <RouterLink to="/">Contact</RouterLink>
     </div>
     <div class=" flex justify-between">
