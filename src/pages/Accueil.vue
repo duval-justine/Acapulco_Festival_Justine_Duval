@@ -1,4 +1,6 @@
 <template>
+<!-- Faire le carrousel Desktop -->
+
     <main class="bg-Extended/true-gray/900">
         <Header class="z-10 relative" />
         <img class="-mt-[85px] max-h-[812px] min-h-[812px] w-full object-cover" src="../../public/images/acc_fond.webp" alt="Image de la plage lors du Festival">
