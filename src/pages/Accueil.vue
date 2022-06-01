@@ -110,7 +110,7 @@
         entre amis pour s’amuser et vivre des moments inoubliables. Le festival propose cette année, une édition sur 4 jours avec une
         programmation de 23 artistes du monde entier. Qu’attendez vous ? Que la fête commence !
       </p>
-      <Bouton class="mr-5 flex justify-end" texte="En savoir plus sur le Festival" lien="/festival" />
+      <Bouton class="mr-5 flex justify-end" texte="En savoir plus sur le Festival" lien="/festival" actif />
     </div>
 
     <div class="hidden flex-row gap-[50px] md:flex lg:gap-[106px]">
