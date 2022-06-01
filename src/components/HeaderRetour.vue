@@ -39,7 +39,7 @@
         <RouterLink :class="{ ' motion-safe:animate-[Depart_0.3s_cubic-bezier(.5,.5,.5,.5)]': menuOuvert }" to="/festival"
           >Festival</RouterLink
         >
-        <RouterLink :class="{ ' motion-safe:animate-[Depart_0.4s_cubic-bezier(.5,.5,.5,.5)]': menuOuvert }" to="/">Contact</RouterLink>
+        <RouterLink :class="{ ' motion-safe:animate-[Depart_0.4s_cubic-bezier(.5,.5,.5,.5)]': menuOuvert }" to="/contact">Contact</RouterLink>
       </ul>
     </nav>
     <div>

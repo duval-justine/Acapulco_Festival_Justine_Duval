@@ -47,7 +47,7 @@
           <RouterLink :class="{ ' motion-safe:animate-[Depart_0.3s_cubic-bezier(.5,.5,.5,.5)]': menuOuvert }" to="/festival"
             >Festival</RouterLink
           >
-          <RouterLink :class="{ ' motion-safe:animate-[Depart_0.4s_cubic-bezier(.5,.5,.5,.5)]': menuOuvert }" to="/">Contact</RouterLink>
+          <RouterLink :class="{ ' motion-safe:animate-[Depart_0.4s_cubic-bezier(.5,.5,.5,.5)]': menuOuvert }" to="/contact">Contact</RouterLink>
         </ul>
       </nav>
       <div>
@@ -75,7 +75,7 @@
         <RouterLink to="/progall">Programmation</RouterLink>
         <RouterLink to="/artistes">Artistes</RouterLink>
         <RouterLink to="/festival">Festival</RouterLink>
-        <RouterLink to="/">Contact</RouterLink>
+        <RouterLink to="/contact">Contact</RouterLink>
       </div>
     </div>
   </div>
