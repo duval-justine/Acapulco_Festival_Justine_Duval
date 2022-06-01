@@ -47,36 +47,37 @@
           <RouterLink :class="{ ' motion-safe:animate-[Depart_0.3s_cubic-bezier(.5,.5,.5,.5)]': menuOuvert }" to="/festival"
             >Festival</RouterLink
           >
-          <RouterLink :class="{ ' motion-safe:animate-[Depart_0.4s_cubic-bezier(.5,.5,.5,.5)]': menuOuvert }" to="/contact">Contact</RouterLink>
+          <RouterLink :class="{ ' motion-safe:animate-[Depart_0.4s_cubic-bezier(.5,.5,.5,.5)]': menuOuvert }" to="/contact"
+            >Contact</RouterLink
+          >
         </ul>
       </nav>
       <div>
         <DecoHG class="ml-auto" />
       </div>
     </div>
-    <!-- Header Responsive -->
-    <div class="hidden justify-between bg-Extended/true-gray/900 md:flex">
-      <RouterLink to="/">
-        <Logo class="relative z-30 ml-8" />
-      </RouterLink>
-      <div
-        class="
-          relative
-          flex flex-shrink-0 flex-grow-0
-          items-center
-          justify-start
-          gap-16
-          font-lato
-          text-[26px]
-          font-semibold
-          text-Extended/true-gray/50
-        "
-      >
-        <RouterLink to="/progall">Programmation</RouterLink>
-        <RouterLink to="/artistes">Artistes</RouterLink>
-        <RouterLink to="/festival">Festival</RouterLink>
-        <RouterLink to="/contact">Contact</RouterLink>
-      </div>
+  </div>
+  <div class="relative z-30 mx-8 hidden justify-between pt-5 md:flex">
+    <RouterLink to="/">
+      <Logo class="relative z-30 ml-8" />
+    </RouterLink>
+    <div
+      class="
+        relative
+        flex flex-shrink-0 flex-grow-0
+        items-center
+        justify-start
+        gap-16
+        font-lato
+        text-base
+        font-semibold
+        text-Extended/true-gray/50
+      "
+    >
+      <RouterLink class="lg:text-lg lg:hover:text-Extended/amber/500" to="/progall">Programmation</RouterLink>
+      <RouterLink class="lg:text-lg lg:hover:text-Extended/amber/500" to="/artistes">Artistes</RouterLink>
+      <RouterLink class="lg:text-lg lg:hover:text-Extended/amber/500" to="/festival">Festival</RouterLink>
+      <RouterLink class="lg:text-lg lg:hover:text-Extended/amber/500" to="/contact">Contact</RouterLink>
     </div>
   </div>
 </template>
