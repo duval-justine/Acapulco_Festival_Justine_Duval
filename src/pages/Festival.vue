@@ -118,7 +118,7 @@
     </div>
     <!-- Format Desktop -->
     <div class="mb-14 hidden flex-col align-middle md:flex">
-      <div class="mt-28 flex flex-row gap-16">
+      <div class="mx-auto mt-28 flex flex-row gap-16">
         <div class="ml-12">
           <img
             class="max-h-[189px] w-full rounded-[40px] opacity-80 lg:max-h-[345px]"
@@ -139,7 +139,7 @@
         </div>
       </div>
       <h2 class="mt-28 ml-7 font-lato text-lg font-bold text-Extended/true-gray/50 lg:text-2xl">La plage de Mateille</h2>
-      <div class="mt-10 flex flex-row gap-16">
+      <div class="mx-auto mt-10 flex flex-row gap-16">
         <div class="ml-16 w-[670px] font-lato text-sm text-Extended/true-gray/50 lg:text-xl">
           <p>
             La plage de Mateille est situé entre l’Étang de Mateille et l’entrée du port. C’est l’une des plages les plus sauvages de
