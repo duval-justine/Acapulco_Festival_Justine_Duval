@@ -11,6 +11,7 @@ import Festival from '../pages/Festival.vue'
 import MentionsLegales from '../pages/MentionsLegales.vue'
 import Contact from '../pages/Contact.vue'
 import Message from '../pages/Message.vue'
+import Page404 from '../pages/View404.vue'
 
 const router = createRouter({
     history: createWebHistory(),
@@ -26,6 +27,7 @@ const router = createRouter({
         { path: '/mtnlegales', name: 'Mentions Légales', component: MentionsLegales },
         { path: '/contact', name: 'Contact', component: Contact },
         { path: '/message', name: 'Message', component: Message },
+        { path: '/:pathMatch(.*)*', name: 'Page 404', component: Page404 },
     ],
 })
 
