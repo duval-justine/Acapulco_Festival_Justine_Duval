@@ -38,7 +38,7 @@
         />
       </div>
       <!-- Ipad -->
-      <div class="relative mt-2 hidden flex-shrink-0 flex-grow-0 items-start justify-center gap-16 self-stretch pb-5 md:flex">
+      <div class="relative mt-2 hidden flex-shrink-0 flex-grow-0 items-start justify-center gap-16 self-stretch pb-5 md:flex lg:hidden">
         <img
           class="h-[254px] w-[248px] flex-shrink-0 flex-grow-0 rounded-[10px] object-cover"
           src="../../public/images/concert_scene1.webp"
