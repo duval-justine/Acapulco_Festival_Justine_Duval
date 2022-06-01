@@ -21,7 +21,7 @@
   <div class="hidden md:flex">
     <DecoBG />
     <div class="flex flex-auto flex-row justify-center gap-52">
-      <div class="mt-8 flex justify-between font-lato text-sm text-Extended/true-gray/50 lg:text-xl">
+      <div class="mt-8 flex justify-between gap-12 font-lato text-sm text-Extended/true-gray/50 lg:text-xl">
         <RouterLink to="/festival">Festival</RouterLink>
         <RouterLink to="/mtnlegales">Mentions Légales</RouterLink>
         <RouterLink to="/">Contact</RouterLink>
