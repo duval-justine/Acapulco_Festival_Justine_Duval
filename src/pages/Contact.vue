@@ -20,7 +20,7 @@
       </div>
       <div class="flex justify-center">
         <div class="absolute mt-56 w-[267px] bg-Extended/true-gray/900 py-3">
-          <form method="post" action="../contact.php" class="mx-6 font-lato text-Extended/true-gray/50" id="form">
+          <form class="mx-6 font-lato text-Extended/true-gray/50" id="form">
             <label for="fname" class="mx-6 text-xs">Nom </label>
             <input
               type="text"
@@ -49,27 +49,29 @@
               class="mx-6 mt-1.5 mb-4 w-[200px] bg-Extended/true-gray/900 font-lato text-xs font-light"
             ></textarea>
             <Line />
-            <div class="mt-6 text-center">
-              <input
-                type="submit"
-                value="Envoyer"
-                name="submit"
-                class="
-                  cursor-pointer
-                  rounded-4xl
-                  border-none
-                  bg-Extended/amber/500
-                  px-9
-                  py-2
-                  font-lato
-                  text-lg
-                  font-medium
-                  text-white
-                  shadow-lg
-                  hover:bg-Extended/amber/400
-                "
-              />
-            </div>
+            <RouterLink to="/message">
+              <div class="mt-6 text-center">
+                <input
+                  type="submit"
+                  value="Envoyer"
+                  name="submit"
+                  class="
+                    cursor-pointer
+                    rounded-4xl
+                    border-none
+                    bg-Extended/amber/500
+                    px-9
+                    py-2
+                    font-lato
+                    text-lg
+                    font-medium
+                    text-white
+                    shadow-lg
+                    hover:bg-Extended/amber/400
+                  "
+                />
+              </div>
+            </RouterLink>
           </form>
         </div>
       </div>

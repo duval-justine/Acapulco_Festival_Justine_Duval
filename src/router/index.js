@@ -10,6 +10,7 @@ import MartinGarrix from '../pages/MartinGarrix.vue'
 import Festival from '../pages/Festival.vue'
 import MentionsLegales from '../pages/MentionsLegales.vue'
 import Contact from '../pages/Contact.vue'
+import Message from '../pages/Message.vue'
 
 const router = createRouter({
     history: createWebHistory(),
@@ -24,6 +25,7 @@ const router = createRouter({
         { path: '/festival', name: 'Festival', component: Festival },
         { path: '/mtnlegales', name: 'Mentions Légales', component: MentionsLegales },
         { path: '/contact', name: 'Contact', component: Contact },
+        { path: '/message', name: 'Message', component: Message },
     ],
 })
 
