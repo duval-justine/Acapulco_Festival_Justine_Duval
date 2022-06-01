@@ -16,7 +16,7 @@
         referrerpolicy="no-referrer-when-downgrade"
       ></iframe>
       <div class="flex justify-center">
-        <h1 class="relative z-20 -mt-40 font-concert-one text-3xl text-Extended/true-gray/50 md:-mt-20 md:text-7xl lg:text-8xl">
+        <h1 class="relative z-20 -mt-40 font-concert-one text-3xl text-Extended/true-gray/50 md:-mt-20 md:text-7xl lg:-mt-60 lg:text-8xl">
           Nous contacter
         </h1>
       </div>
