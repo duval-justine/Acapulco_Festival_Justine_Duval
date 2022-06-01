@@ -41,7 +41,7 @@
     </div>
     <!-- Reponsive -->
     <div class="hidden md:flex">
-      <div class="mx-12 mt-20 mb-20 grid w-11/12 grid-cols-[repeat(auto-fit,minmax(300px,1fr))] items-center justify-between gap-7">
+      <div class="mx-12 mt-20 mb-20 grid w-11/12 grid-cols-[repeat(auto-fit,minmax(300px,1fr))] items-center justify-between gap-x-12">
         <Vignette class="mt-12 pb-52" image="/images/prog_daw.webp" nom="Alan Walker" date="Jeudi 7 juillet" lien="/" actif />
         <Vignette class="mt-12 pb-52" image="/images/prog_dalesso.webp" nom="Alesso" date="Dimanche 10 juillet" lien="/" actif />
         <Vignette class="mt-12 pb-52" image="/images/prog_dal.webp" nom="Amélie Lens" date="Vendredi 8 & Samedi 9 juillet" lien="/" actif />

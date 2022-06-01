@@ -1,7 +1,7 @@
 <template>
   <!-- Mobile -->
   <div>
-    <img class="absolute mx-28 mt-2 h-[136px] w-60 object-cover" :src="image" alt="" />
+    <img class="absolute mx-28 mt-2 h-[136px] w-60 object-cover opacity-70" :src="image" alt="" />
     <div class="absolute ml-3 mt-24 flex flex-col items-start justify-start gap-[7px]">
       <p class="flex-shrink-0 flex-grow-0 font-concert-one text-3xl text-Extended/true-gray/50 md:text-4xl">{{ nom }}</p>
       <div class="relative flex flex-shrink-0 flex-grow-0 items-center justify-start gap-16 self-stretch">
