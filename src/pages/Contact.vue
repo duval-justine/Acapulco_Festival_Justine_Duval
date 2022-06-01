@@ -16,39 +16,50 @@
         referrerpolicy="no-referrer-when-downgrade"
       ></iframe>
       <div class="flex justify-center">
-        <h1 class="absolute mt-40 font-concert-one text-3xl text-Extended/true-gray/50">Nous contacter</h1>
+        <h1 class="md: absolute mt-40 font-concert-one text-3xl text-Extended/true-gray/50 md:mt-20 md:text-7xl lg:text-8xl">
+          Nous contacter
+        </h1>
       </div>
       <div class="flex justify-center">
-        <div class="absolute mt-56 w-[267px] bg-Extended/true-gray/900 py-3">
+        <div class="absolute mt-56 w-[267px] bg-Extended/true-gray/900 py-3 md:h-[1273.01px] md:w-[729.09px] lg:h-[1055px] lg:w-[1170px]">
           <form class="mx-6 font-lato text-Extended/true-gray/50" id="form">
-            <label for="fname" class="mx-6 text-xs">Nom </label>
+            <label for="fname" class="mx-6 text-xs md:text-2xl">Nom </label>
+            <br />
             <input
               type="text"
               id="fname"
               name="name"
               placeholder="Votre nom"
-              class="mx-6 mt-1.5 mb-4 w-[200px] bg-Extended/true-gray/900 font-lato text-xs font-light"
+              class="mx-6 mt-1.5 mb-4 w-[200px] bg-Extended/true-gray/900 font-lato text-xs font-light md:text-2xl"
             />
-            <Line />
-            <label for="emailAddress" class="mx-6 text-xs">Email</label>
+            <div class="flex justify-center">
+              <Line />
+            </div>
+            <label for="emailAddress" class="mx-6 text-xs md:text-2xl">Email</label>
+            <br />
             <input
               id="emailAddress"
               type="email"
               name="email"
               placeholder="Votre email"
               required
-              class="mx-6 mt-1.5 mb-4 w-[200px] bg-Extended/true-gray/900 font-lato text-xs font-light"
+              class="mx-6 mt-1.5 mb-4 w-[200px] bg-Extended/true-gray/900 font-lato text-xs font-light md:text-2xl"
             />
-            <Line />
-            <label for="subject" class="mx-6 text-xs">Message</label>
+            <div class="flex justify-center">
+              <Line />
+            </div>
+            <label for="subject" class="mx-6 text-xs md:text-2xl">Message</label>
+            <br />
             <textarea
               id="subject"
               name="message"
               placeholder="Votre message"
               style="height: 150px"
-              class="mx-6 mt-1.5 mb-4 w-[200px] bg-Extended/true-gray/900 font-lato text-xs font-light"
+              class="mx-6 mt-1.5 mb-4 w-[200px] bg-Extended/true-gray/900 font-lato text-xs font-light md:text-2xl"
             ></textarea>
-            <Line />
+            <div class="flex justify-center">
+              <Line />
+            </div>
             <RouterLink to="/message">
               <div class="mt-6 text-center">
                 <input
