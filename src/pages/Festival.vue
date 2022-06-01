@@ -67,9 +67,57 @@
         />
         <p class="absolute my-16 font-concert-one text-4xl text-Extended/true-gray/50">Aca Playa</p>
       </div>
+      <h2 class="mt-28 ml-7 font-lato text-lg font-bold text-Extended/true-gray/50 lg:text-2xl">Retour en images</h2>
+      <div class="bg-Extended/amber/300">
+        <h4 class="mt-5 ml-7 font-concert-one text-sm font-bold text-Extended/true-gray/50">Summer</h4>
+      </div>
+      <div class="mt-2 flex w-full snap-x gap-0 overflow-x-auto">
+        <div class="shrink-0 snap-center first:pl-5 last:pr-5">
+          <img class="w-full object-cover" src="../../public/images/festi_sum1.webp" alt="" />
+        </div>
+        <div class="shrink-0 snap-center first:pl-5 last:pr-5">
+          <img class="w-full object-cover" src="../../public/images/festi_sum2.webp" alt="" />
+        </div>
+        <div class="shrink-0 snap-center first:pl-5 last:pr-5">
+          <img class="w-full object-cover" src="../../public/images/festi_sum3.webp" alt="" />
+        </div>
+        <div class="shrink-0 snap-center first:pl-5 last:pr-5">
+          <img class="w-full object-cover" src="../../public/images/festi_sum4.webp" alt="" />
+        </div>
+        <div class="shrink-0 snap-center first:pl-5 last:pr-5">
+          <img class="w-full object-cover" src="../../public/images/festi_sum5.webp" alt="" />
+        </div>
+        <div class="shrink-0 snap-center first:pl-5 last:pr-5">
+          <img class="w-full object-cover" src="../../public/images/festi_sum6.webp" alt="" />
+        </div>
+        <h4 class="mt-5 ml-7 font-concert-one text-sm font-bold text-Extended/amber/300">Night</h4>
+        <div class="mt-2 flex w-full snap-x gap-0 overflow-x-auto">
+          <div class="shrink-0 snap-center first:pl-5 last:pr-5">
+            <img class="w-full object-cover" src="../../public/images/festi_night1.webp" alt="" />
+          </div>
+          <div class="shrink-0 snap-center first:pl-5 last:pr-5">
+            <img class="w-full object-cover" src="../../public/images/festi_night2.webp" alt="" />
+          </div>
+          <div class="shrink-0 snap-center first:pl-5 last:pr-5">
+            <img class="w-full object-cover" src="../../public/images/festi_night3.webp" alt="" />
+          </div>
+        </div>
+        <h4 class="mt-5 ml-7 font-concert-one text-sm font-bold text-Extended/amber/300">Fireworks</h4>
+        <div class="mt-2 flex w-full snap-x gap-0 overflow-x-auto pb-5">
+          <div class="shrink-0 snap-center first:pl-5 last:pr-5">
+            <img class="w-full object-cover" src="../../public/images/festi_fire1.webp" alt="" />
+          </div>
+          <div class="shrink-0 snap-center first:pl-5 last:pr-5">
+            <img class="w-full object-cover" src="../../public/images/festi_fire2.webp" alt="" />
+          </div>
+          <div class="shrink-0 snap-center first:pl-5 last:pr-5">
+            <img class="w-full object-cover" src="../../public/images/festi_fire3.webp" alt="" />
+          </div>
+        </div>
+      </div>
     </div>
     <!-- Format Desktop -->
-    <div class="hidden flex-col align-middle md:flex">
+    <div class="mb-14 hidden flex-col align-middle md:flex">
       <div class="mt-28 flex flex-row gap-16">
         <div class="ml-12">
           <img
@@ -137,46 +185,59 @@
           <p class="absolute my-16 font-concert-one text-4xl text-Extended/true-gray/50 lg:my-24 lg:text-5xl">Aca Playa</p>
         </div>
       </div>
-      <h2 class="mt-28 ml-7 font-lato text-lg font-bold text-Extended/true-gray/50 lg:text-2xl">Retour en images</h2>
-      <div class="bg-Extended/amber/300">
-        <h4 class="mt-5 ml-7 font-concert-one text-sm font-bold text-Extended/true-gray/50">Summer</h4>
+      <div class="mt-28 bg-Extended/amber/500">
+        <h2 class="ml-7 py-5 font-lato text-base font-bold text-Extended/true-gray/50 lg:text-2xl">Retour en images</h2>
       </div>
-    </div>
-
-    <img class="w-full object-cover" src="../../public/images/festi_sum1.webp" alt="" />
-
-    <img class="w-full object-cover" src="../../public/images/festi_sum2.webp" alt="" />
-
-    <img class="w-full object-cover" src="../../public/images/festi_sum3.webp" alt="" />
-
-    <img class="w-full object-cover" src="../../public/images/festi_sum4.webp" alt="" />
-
-    <img class="w-full object-cover" src="../../public/images/festi_sum5.webp" alt="" />
-
-    <img class="w-full object-cover" src="../../public/images/festi_sum6.webp" alt="" />
-
-    <h4 class="mt-5 ml-7 font-concert-one text-sm font-bold text-Extended/amber/300">Night</h4>
-    <div class="mt-2 flex w-full snap-x gap-0 overflow-x-auto">
-      <div class="shrink-0 snap-center first:pl-5 last:pr-5">
-        <img class="w-full object-cover" src="../../public/images/festi_night1.webp" alt="" />
+      <div class="bg-Extended/amber/300 pt-2 pb-14">
+        <h4 class="ml-7 pb-2 font-concert-one text-2xl font-bold text-Extended/true-gray/50">Summer</h4>
+        <div
+          class="
+            grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))]
+            items-center
+            justify-between
+            gap-0
+            lg:grid-cols-[repeat(3,minmax(300px,1fr))]
+          "
+        >
+          <img class="w-full object-cover" src="../../public/images/festi_sum1.webp" alt="Personnes de dos" />
+          <img class="w-full object-cover" src="../../public/images/festi_sum2.webp" alt="Personnes qui font la fête" />
+          <img class="w-full object-cover" src="../../public/images/festi_sum3.webp" alt="Fille heureuse" />
+          <img class="w-full object-cover" src="../../public/images/festi_sum4.webp" alt="Panneaux Indications" />
+          <img class="w-full object-cover" src="../../public/images/festi_sum5.webp" alt="Platine Dj" />
+          <img class="w-full object-cover" src="../../public/images/festi_sum6.webp" alt="Bières" />
+        </div>
       </div>
-      <div class="shrink-0 snap-center first:pl-5 last:pr-5">
-        <img class="w-full object-cover" src="../../public/images/festi_night2.webp" alt="" />
+      <div class="bg-Extended/amber/400 pt-2 pb-14">
+        <h4 class="ml-7 pb-2 font-concert-one text-2xl font-bold text-Extended/true-gray/50">Night</h4>
+        <div
+          class="
+            grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))]
+            items-center
+            justify-between
+            gap-0
+            lg:grid-cols-[repeat(3,minmax(300px,1fr))]
+          "
+        >
+          <img class="w-full object-cover" src="../../public/images/festi_night1.webp" alt="Vue du concert un peu flou" />
+          <img class="w-full object-cover" src="../../public/images/festi_night2.webp" alt="Fille qui fait un coeur avec ses mains" />
+          <img class="w-full object-cover" src="../../public/images/festi_night3.webp" alt="Personnes qui dansent lors d'un concert" />
+        </div>
       </div>
-      <div class="shrink-0 snap-center first:pl-5 last:pr-5">
-        <img class="w-full object-cover" src="../../public/images/festi_night3.webp" alt="" />
-      </div>
-    </div>
-    <h4 class="mt-5 ml-7 font-concert-one text-sm font-bold text-Extended/amber/300">Fireworks</h4>
-    <div class="mt-2 flex w-full snap-x gap-0 overflow-x-auto pb-5">
-      <div class="shrink-0 snap-center first:pl-5 last:pr-5">
-        <img class="w-full object-cover" src="../../public/images/festi_fire1.webp" alt="" />
-      </div>
-      <div class="shrink-0 snap-center first:pl-5 last:pr-5">
-        <img class="w-full object-cover" src="../../public/images/festi_fire2.webp" alt="" />
-      </div>
-      <div class="shrink-0 snap-center first:pl-5 last:pr-5">
-        <img class="w-full object-cover" src="../../public/images/festi_fire3.webp" alt="" />
+      <div class="bg-Extended/amber/500 pt-2 pb-14">
+        <h4 class="ml-7 pb-2 font-concert-one text-2xl font-bold text-Extended/true-gray/50">Fireworks</h4>
+        <div
+          class="
+            grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))]
+            items-center
+            justify-between
+            gap-0
+            lg:grid-cols-[repeat(3,minmax(300px,1fr))]
+          "
+        >
+          <img class="w-full object-cover" src="../../public/images/festi_fire1.webp" alt="Feux d'artifices" />
+          <img class="w-full object-cover" src="../../public/images/festi_fire2.webp" alt="Feux d'artifices" />
+          <img class="w-full object-cover" src="../../public/images/festi_fire3.webp" alt="Feux d'artifices" />
+        </div>
       </div>
     </div>
   </main>
