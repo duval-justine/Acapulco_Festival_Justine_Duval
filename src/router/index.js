@@ -5,6 +5,7 @@ import ProgrammationAll from '../pages/ProgrammationAll.vue'
 import ProgrammationJeudi from '../pages/ProgrammationJeudi.vue'
 import ProgrammationVendredi from '../pages/ProgrammationVendredi.vue'
 import ConcertMG from '../pages/ConcertMG.vue'
+import Artistes from '../pages/Artistes.vue'
 import MartinGarrix from '../pages/MartinGarrix.vue'
 import Festival from '../pages/Festival.vue'
 import MentionsLegales from '../pages/MentionsLegales.vue'
@@ -17,6 +18,7 @@ const router = createRouter({
         { path: '/progjeudi', name: 'Programmation Jeudi', component: ProgrammationJeudi },
         { path: '/progvendredi', name: 'Programmation Vendredi', component: ProgrammationVendredi },
         { path: '/concertmg', name: 'Concert Martin Garrix', component: ConcertMG },
+        { path: '/artistes', name: 'Artistes', component: Artistes },
         { path: '/martingarrix', name: 'Artiste Martin Garrix', component: MartinGarrix },
         { path: '/festival', name: 'Festival', component: Festival },
         { path: '/mtnlegales', name: 'Mentions Légales', component: MentionsLegales },

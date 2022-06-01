@@ -33,7 +33,9 @@
         <RouterLink :class="{ ' motion-safe:animate-[Depart_0.1s_cubic-bezier(.5,.5,.5,.5)]': menuOuvert }" to="/progall"
           >Programmes</RouterLink
         >
-        <RouterLink :class="{ ' motion-safe:animate-[Depart_0.2s_cubic-bezier(.5,.5,.5,.5)]': menuOuvert }" to="/">Artistes</RouterLink>
+        <RouterLink :class="{ ' motion-safe:animate-[Depart_0.2s_cubic-bezier(.5,.5,.5,.5)]': menuOuvert }" to="/artistes"
+          >Artistes</RouterLink
+        >
         <RouterLink :class="{ ' motion-safe:animate-[Depart_0.3s_cubic-bezier(.5,.5,.5,.5)]': menuOuvert }" to="/festival"
           >Festival</RouterLink
         >
