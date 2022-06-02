@@ -51,6 +51,9 @@
           <RouterLink :class="{ ' motion-safe:animate-[Depart_0.4s_cubic-bezier(.5,.5,.5,.5)]': menuOuvert }" to="/contact"
             >Contact</RouterLink
           >
+          <RouterLink :class="{ ' motion-safe:animate-[Depart_0.4s_cubic-bezier(.5,.5,.5,.5)]': menuOuvert }" to="/connexion"
+            >Connexion</RouterLink
+          >
         </ul>
       </nav>
       <div>
@@ -79,6 +82,7 @@
       <RouterLink class="lg:text-lg lg:hover:text-Extended/amber/500" to="/artistes">Artistes</RouterLink>
       <RouterLink class="lg:text-lg lg:hover:text-Extended/amber/500" to="/festival">Festival</RouterLink>
       <RouterLink class="lg:text-lg lg:hover:text-Extended/amber/500" to="/contact">Contact</RouterLink>
+      <RouterLink class="lg:text-lg lg:hover:text-Extended/amber/500" to="/connexion">Connexion</RouterLink>
     </div>
   </div>
 </template>
