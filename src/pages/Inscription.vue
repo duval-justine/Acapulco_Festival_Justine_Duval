@@ -4,9 +4,9 @@
   </header>
   <main>
     <DecoBD class="mt-12" />
-    <h1 class="text-center font-concert-one text-3xl text-Extended/true-gray/50">Connexion</h1>
+    <h1 class="text-center font-concert-one text-3xl text-Extended/true-gray/50">Inscription</h1>
     <div class="flex flex-col items-center">
-      <form @submit.prevent="onCnx">
+      <form @submit.prevent="onCreate">
         <div class="input-group mb-3">
           <div class="input-group-prepend">
             <button class="mt-9 mb-2 ml-6 font-lato text-sm font-medium text-Extended/true-gray/50">Adresse-email</button>
@@ -29,7 +29,6 @@
             required
           />
         </div>
-        <p class="mb-10 mr-6 mt-10 text-right font-lato text-sm font-medium text-Extended/true-gray/50">Mot de passe oublié ?</p>
         <div
           class="relative mx-[88px] flex items-center justify-center gap-2 rounded-5xl bg-Extended/amber/500 px-7 py-2"
           style="box-shadow: 0px 1.5600000619888306px 1.5600000619888306px 2.017021417617798px rgba(0, 0, 0, 0.25)"
@@ -39,17 +38,18 @@
             class="flex-shrink-0 flex-grow-0 text-left font-lato text-base font-medium text-Extended/true-gray/50 drop-shadow-sm"
             type="submit"
           >
-            Se connecter
+            S'inscrire
           </button>
         </div>
       </form>
     </div>
     <div class="flex flex-row justify-center gap-1">
-      <p class="mt-10 text-center font-lato font-medium text-Extended/true-gray/50">Pas encore inscrit ?</p>
-      <RouterLink to="/inscription">
-        <p class="mt-10 text-center font-lato font-medium text-Extended/amber/500">S’inscrire</p>
+      <p class="mt-10 text-center font-lato font-medium text-Extended/true-gray/50">Déjà inscrit ?</p>
+      <RouterLink to="/connexion">
+        <p class="mt-10 text-center font-lato font-medium text-Extended/amber/500">Se connecter</p>
       </RouterLink>
     </div>
+
     <DecoHG class="ml-auto" />
   </main>
 </template>
@@ -58,7 +58,7 @@
 import Header from "../components/Header.vue";
 import DecoHG from "../components/icons/DecoHG.vue";
 import DecoBD from "../components/icons/DecoBD.vue";
-
+//import {emitter} from '../main.js'
 import {
   getFirestore, // Obtenir le Firestore
   collection, // Utiliser une collection de documents
@@ -131,6 +131,7 @@ export default {
           .catch((error) => {
             console.log("erreur création", error);
             this.message = "erreur de création";
+            // ..
           });
 
         this.onCnx();

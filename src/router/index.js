@@ -13,6 +13,7 @@ import Contact from '../pages/Contact.vue'
 import Message from '../pages/Message.vue'
 import Page404 from '../pages/View404.vue'
 import Connexion from '../pages/Connexion.vue'
+import Inscription from '../pages/Inscription.vue'
 
 const router = createRouter({
     history: createWebHistory(),
@@ -30,6 +31,7 @@ const router = createRouter({
         { path: '/message', name: 'Message', component: Message },
         { path: '/:pathMatch(.*)*', name: 'Page 404', component: Page404 },
         { path: '/connexion', name: 'Connexion', component: Connexion },
+        { path: '/inscription', name: 'Inscription', component: Inscription },
     ],
 })
 
