@@ -7,7 +7,7 @@
   <main>
     <h1 class="mt-12 font-concert-one text-3xl text-Extended/true-gray/50">Artistes</h1>
     <!-- Mobile -->
-    <div class="md:hidden">
+    <!-- <div class="md:hidden">
       <Vignette class="mt-12 pb-52" image="/images/prog_daw.webp" nom="Alan Walker" date="Jeudi 7 juillet" lien="/" actif />
       <Vignette class="mt-12 pb-52" image="/images/prog_dalesso.webp" nom="Alesso" date="Dimanche 10 juillet" lien="/" actif />
       <Vignette class="mt-12 pb-52" image="/images/prog_dal.webp" nom="Amélie Lens" date="Vendredi 8 & Samedi 9 juillet" lien="/" actif />
@@ -38,11 +38,20 @@
       <Vignette class="mt-12 pb-52" image="/images/prog_dtopic.webp" nom="Topic" date="Vendredi 9 juillet" lien="/" actif />
       <Vignette class="mt-12 pb-52" image="/images/prog_durt.webp" nom="U.R.TRAX" date="Vendredi 9 juillet" lien="/" actif />
       <Vignette class="mt-12 pb-52" image="/images/prog_dy.webp" nom="Yuksek" date="Jeudi 7 juillet" lien="/" actif />
-    </div>
+    </div> -->
     <!-- Reponsive -->
     <div class="hidden md:flex">
       <div class="mx-12 mt-20 mb-20 grid w-11/12 grid-cols-[repeat(auto-fit,minmax(300px,1fr))] items-center justify-between gap-x-12">
-        <Vignette class="mt-12 pb-52" image="/images/prog_daw.webp" nom="Alan Walker" date="Jeudi 7 juillet" lien="/" actif />
+        <Vignette
+          v-for="artiste in listeArtistesSynchro"
+          :key="artiste.id"
+          :image="artiste.image"
+          :nom="artiste.nom"
+          :date="artiste.date"
+          :lien="artiste.lien"
+          actif
+        />
+        <!-- <Vignette class="mt-12 pb-52" image="/images/prog_daw.webp" nom="Alan Walker" date="Jeudi 7 juillet" lien="/" actif />
         <Vignette class="mt-12 pb-52" image="/images/prog_dalesso.webp" nom="Alesso" date="Dimanche 10 juillet" lien="/" actif />
         <Vignette class="mt-12 pb-52" image="/images/prog_dal.webp" nom="Amélie Lens" date="Vendredi 8 & Samedi 9 juillet" lien="/" actif />
         <Vignette class="mt-12 pb-52" image="/images/prog_dbj.webp" nom="B Jones" date="Jeudi 7 juillet" lien="/" actif />
@@ -71,7 +80,7 @@
         <Vignette class="mt-12 pb-52" image="/images/prog_dsh.webp" nom="Seth Hills" date="Vendredi 9 juillet" lien="/" actif />
         <Vignette class="mt-12 pb-52" image="/images/prog_dtopic.webp" nom="Topic" date="Vendredi 9 juillet" lien="/" actif />
         <Vignette class="mt-12 pb-52" image="/images/prog_durt.webp" nom="U.R.TRAX" date="Vendredi 9 juillet" lien="/" actif />
-        <Vignette class="mt-12 pb-52" image="/images/prog_dy.webp" nom="Yuksek" date="Jeudi 7 juillet" lien="/" actif />
+        <Vignette class="mt-12 pb-52" image="/images/prog_dy.webp" nom="Yuksek" date="Jeudi 7 juillet" lien="/" actif /> -->
       </div>
     </div>
   </main>
@@ -85,8 +94,60 @@
 import Header from "../components/Header.vue";
 import Vignette from "../components/VignetteArtistes.vue";
 import Footer from "../components/Footer.vue";
+import {
+  getFirestore, // Obtenir le Firestore
+  collection, // Utiliser une collection de documents
+  doc, // Obtenir un document par son id
+  getDocs, // Obtenir la liste des documents d'une collection
+  addDoc, // Ajouter un document à une collection
+  updateDoc, // Mettre à jour un document dans une collection
+  deleteDoc, // Supprimer un document d'une collection
+  onSnapshot, // Demander une liste de documents d'une collection, en les synchronisant
+  query, // Permet d'effectuer des requêtes sur Firestore
+  orderBy, // Permet de demander le tri d'une requête query
+} from "https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js";
+
+// Cloud Storage : import des fonctions
+import {
+  getStorage, // Obtenir le Cloud Storage
+  ref, // Pour créer une référence à un fichier à uploader
+  getDownloadURL, // Permet de récupérer l'adress complète d'un fichier du Storage
+  uploadString, // Permet d'uploader sur le Cloud Storage une image en Base64
+} from "https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js";
 
 export default {
   components: { Header, Vignette, Footer },
+  data() {
+    return {
+      nom: null,
+      listeArtistes: [],
+      listeArtistesSynchro: [],
+    };
+  },
+  mounted() {
+    this.getArtistesSynchro();
+  },
+  methods: {
+    async getArtistesSynchro() {
+      const firestore = getFirestore();
+      const dbArtiste = collection(firestore, "Artistes");
+      const q = query(dbArtiste, orderBy("nom", "asc"));
+      await onSnapshot(q, (snapshot) => {
+        this.listeArtistesSynchro = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+
+        this.listeArtistesSynchro.forEach(function (personne) {
+          const storage = getStorage();
+          const spaceRef = ref(storage, "Artistes/" + personne.photo);
+          getDownloadURL(spaceRef)
+            .then((url) => {
+              personne.photo = url;
+            })
+            .catch((error) => {
+              console.log("erreur downloadUrl", error);
+            });
+        });
+      });
+    },
+  },
 };
 </script>
