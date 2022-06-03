@@ -17,6 +17,8 @@ import Connexion from '../pages/Connexion.vue'
 import Inscription from '../pages/Inscription.vue'
 import GuideStyle from '../pages/GuideStyle.vue'
 import CreaArtistes from '../pages/CreaArtistes.vue'
+import GestionArtistes from '../pages/GestionArtistes.vue'
+import DeleteArtistes from '../pages/DeleteArtiste.vue'
 
 const router = createRouter({
     history: createWebHistory(),
@@ -37,7 +39,8 @@ const router = createRouter({
         { path: '/connexion', name: 'Connexion', component: Connexion },
         { path: '/inscription', name: 'Inscription', component: Inscription },
         { path: '/guidestyle', name: 'Guide de Style', component: GuideStyle },
-        { path: '/creaartistes', name: 'Creation d Artistes', component: CreaArtistes },
+        { path: '/gestionartistes', name: 'Gestions des Artistes', component: GestionArtistes },
+        { path: '/deleteartistes/:id', name: 'deleteartiste', component: DeleteArtistes },
     ],
 })
 
