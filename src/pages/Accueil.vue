@@ -8,6 +8,12 @@
       src="../../public/images/acc_fond.webp"
       alt="Image de la plage lors du Festival"
     />
+    <div class="flex flex-col items-center">
+      <h1 class="absolute -mt-[600px] font-concert-one text-5xl text-Extended/true-gray/50 md:text-7xl lg:text-9xl">Acapul'co</h1>
+      <h2 class="absolute -mt-[500px] font-concert-one text-3xl text-Extended/true-gray/50 md:text-4xl lg:-mt-[460px] lg:text-6xl">
+        Festival
+      </h2>
+    </div>
     <div class="bg-Extended/amber/500 pt-14">
       <!-- Carrousel au format mobile -->
       <div id="carouselExampleSlidesOnly" class="slide carousel relative md:hidden lg:hidden" data-bs-ride="carousel">
