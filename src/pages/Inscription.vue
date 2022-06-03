@@ -28,6 +28,17 @@
             v-model="user.password"
             required
           />
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <button class="mt-9 mb-2 ml-6 font-lato text-sm font-medium text-Extended/true-gray/50">Vérification du mot de passe</button>
+            </div>
+            <input
+              class="border-Extended/true-gray/50 bg-Extended/true-gray/50 px-20 py-1 text-Extended/true-gray/900"
+              type="password"
+              v-model="password2"
+              required
+            />
+          </div>
         </div>
         <div
           class="relative mx-[88px] flex items-center justify-center gap-2 rounded-5xl bg-Extended/amber/500 px-7 py-2"
@@ -131,7 +142,6 @@ export default {
           .catch((error) => {
             console.log("erreur création", error);
             this.message = "erreur de création";
-            // ..
           });
 
         this.onCnx();
