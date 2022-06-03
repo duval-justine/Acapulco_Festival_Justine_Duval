@@ -53,7 +53,7 @@
     </div> -->
     <!-- Reponsive -->
     <div class="hidden md:flex">
-      <div class="mx-12 mt-20 mb-20 grid w-11/12 grid-cols-[repeat(auto-fit,minmax(300px,1fr))] items-center justify-between gap-x-12">
+      <div class="mx-12 mt-20 mb-20 grid w-11/12 grid-cols-[repeat(auto-fit,minmax(300px,1fr))] items-center justify-between gap-x-20">
         <Vignette
           class="mt-12 pb-52"
           v-for="artiste in listeArtistesSynchro"
@@ -164,10 +164,6 @@ export default {
         });
       });
     },
-    // dateFr(d) {
-    //   let date = d.split("-");
-    //   return date[2] + "/" + date[1] + "/" + date[0];
-    // },
   },
 };
 </script>

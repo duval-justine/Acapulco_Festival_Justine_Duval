@@ -5,8 +5,8 @@
     </header>
     <main class="mt-14">
       <Entete actif />
-      <div v-for="(uneListeArtistes, categorie) in listeArtistesParCategorie" :key="categorie">
-        <div class="flex gap-4 pt-[223px] lg:pt-[350px]">
+      <div class="pt-[223px] lg:pt-[350px]" v-for="(uneListeArtistes, categorie) in listeArtistesParCategorie" :key="categorie">
+        <div class="flex gap-4">
           <h4 class="ml-6 font-lato text-[12px] text-Extended/true-gray/50 lg:text-xl">{{ categorie }}</h4>
           <Line class="mt-5" />
         </div>
@@ -130,7 +130,7 @@
 
         <!-- Format Desktop -->
         <div class="hidden flex-col md:flex">
-          <div class="mx-12 mt-20 mb-20 grid w-11/12 grid-cols-[repeat(auto-fit,minmax(300px,1fr))] items-center justify-between gap-7">
+          <div class="mx-12 mt-5 mb-20 grid w-11/12 grid-cols-[repeat(auto-fit,minmax(300px,1fr))] items-center justify-between gap-7">
             <Vignette
               v-for="artiste in uneListeArtistes"
               :key="artiste.id"

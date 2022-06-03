@@ -8,8 +8,8 @@
         <div div class="-mt-3 flex-shrink-0 flex-grow-0">
           <RouterLink :to="lien">
             <button
-              class="border-1 rounded-2xl border-Extended/amber/500 bg-Extended/true-gray/900 drop-shadow-md"
-              :class="{ 'bg-Extended/amber/500': actif }"
+              class="rounded-lg border-2 border-Extended/amber/500 bg-Extended/true-gray/900 drop-shadow-md hover:bg-Extended/amber/500"
+              :class="{ 'bg-Extended/amber/500 ': actif }"
             >
               <p class="py-2 px-3 font-lato text-[12px] text-Extended/true-gray/50 drop-shadow-md md:text-xs">En savoir plus</p>
             </button>
