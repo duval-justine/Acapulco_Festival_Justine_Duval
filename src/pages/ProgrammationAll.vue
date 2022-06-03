@@ -5,28 +5,20 @@
     </header>
     <main class="mt-14">
       <Entete actif />
-      <div class="flex gap-4 pt-[223px] lg:pt-[350px]">
-        <h4 class="ml-6 font-lato text-[12px] text-Extended/true-gray/50 lg:text-xl">En tête d'affiche</h4>
-        <Line class="mt-5" />
-      </div>
-
-      <!-- Format Mobile -->
-      <div class="md:hidden">
-        <div class="flex w-full snap-x gap-5 overflow-x-auto">
-          <div class="shrink-0 snap-center first:pl-5 last:pr-5" v-for="artiste in listeArtistesSynchro">
-            <Vignette
-              class="ml-4 shrink-0"
-              :key="artiste.id"
-              :image="artiste.image"
-              :nom="artiste.nom"
-              :date="artiste.date"
-              :lien="artiste.lien2"
-              actif
-            />
+      <div v-for="(uneListeArtistes, categorie) in listeArtistesParCategorie" :key="categorie">
+        <div class="flex gap-4 pt-[223px] lg:pt-[350px]">
+          <h4 class="ml-6 font-lato text-[12px] text-Extended/true-gray/50 lg:text-xl">{{ categorie }}</h4>
+          <Line class="mt-5" />
+        </div>
+        <!-- Format Mobile -->
+        <div class="md:hidden">
+          <div class="flex w-full snap-x gap-5 overflow-x-auto">
+            <div class="shrink-0 snap-center first:pl-5 last:pr-5" v-for="artiste in uneListeArtistes" :key="artiste.id">
+              <Vignette class="ml-4 shrink-0" :image="artiste.image" :nom="artiste.nom" :date="artiste.date" :lien="artiste.lien2" actif />
+            </div>
           </div>
         </div>
-      </div>
-      <!-- <div class="md:hidden">
+        <!-- <div class="md:hidden">
         <div class="flex w-full snap-x gap-5 overflow-x-auto">
           <div class="shrink-0 snap-center first:pl-5 last:pr-5">
             <Vignette
@@ -136,20 +128,22 @@
         </div>
       </div> -->
 
-      <!-- Format Desktop -->
-      <div class="hidden flex-col md:flex">
-        <div class="mx-12 mt-20 mb-20 grid w-11/12 grid-cols-[repeat(auto-fit,minmax(300px,1fr))] items-center justify-between gap-7">
-          <Vignette
-            v-for="artiste in listeArtistesSynchro"
-            :key="artiste.id"
-            :image="artiste.image"
-            :nom="artiste.nom"
-            :date="artiste.date"
-            :lien="artiste.lien2"
-            actif
-          />
+        <!-- Format Desktop -->
+        <div class="hidden flex-col md:flex">
+          <div class="mx-12 mt-20 mb-20 grid w-11/12 grid-cols-[repeat(auto-fit,minmax(300px,1fr))] items-center justify-between gap-7">
+            <Vignette
+              v-for="artiste in uneListeArtistes"
+              :key="artiste.id"
+              :image="artiste.image"
+              :nom="artiste.nom"
+              :date="artiste.date"
+              :lien="artiste.lien2"
+              actif
+            />
+          </div>
         </div>
       </div>
+
       <!-- <div class="hidden flex-col md:flex">
         <div class="mx-12 mt-20 mb-20 grid w-11/12 grid-cols-[repeat(auto-fit,minmax(300px,1fr))] items-center justify-between gap-7">
           <RouterLink to="/concertMG">
@@ -211,6 +205,7 @@ import Entete from "../components/EnteteProg.vue";
 import Vignette from "../components/VignetteProg.vue";
 import Line from "../components/icons/Line.vue";
 import Footer from "../components/Footer.vue";
+import { groupBy } from "lodash";
 import {
   getFirestore, // Obtenir le Firestore
   collection, // Utiliser une collection de documents
@@ -240,6 +235,11 @@ export default {
       listeArtistes: [],
       listeArtistesSynchro: [],
     };
+  },
+  computed: {
+    listeArtistesParCategorie() {
+      return groupBy(this.listeArtistesSynchro, "catégorie");
+    },
   },
   mounted() {
     this.getArtistesSynchro();

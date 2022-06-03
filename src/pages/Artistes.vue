@@ -107,6 +107,7 @@
 import Header from "../components/Header.vue";
 import Vignette from "../components/VignetteArtistes.vue";
 import Footer from "../components/Footer.vue";
+import { groupBy } from "lodash";
 import {
   getFirestore, // Obtenir le Firestore
   collection, // Utiliser une collection de documents
@@ -138,6 +139,7 @@ export default {
       filter: "",
     };
   },
+
   mounted() {
     this.getArtistesSynchro();
   },
