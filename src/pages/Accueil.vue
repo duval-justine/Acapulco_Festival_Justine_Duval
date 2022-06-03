@@ -218,7 +218,7 @@
           Vous avez une question ou vous désirez nous faire part d’une suggestion ? N’hésitez pas à laisser votre message dans ce formulaire
           de contact.
         </p>
-        <Bouton class="mt-6 mr-[323px] flex justify-end pb-5" texte="Formulaire de Contact" lien="/" actif />
+        <Bouton class="mt-6 mr-[323px] flex justify-end pb-5" texte="Formulaire de Contact" lien="/contact" actif />
       </div>
     </div>
   </main>
