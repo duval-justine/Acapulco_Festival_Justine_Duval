@@ -8,8 +8,12 @@
       src="../../public/images/festi_fond.webp"
       alt=""
     />
-    <h1 class="absolute ml-8 -mt-[600px] font-concert-one text-5xl text-Extended/true-gray/50">Acapul'co</h1>
-    <h2 class="absolute ml-[214px] -mt-[500px] font-concert-one text-3xl text-Extended/true-gray/50">Festival</h2>
+    <div class="flex flex-col items-center">
+      <h1 class="absolute -mt-[600px] font-concert-one text-5xl text-Extended/true-gray/50 md:text-7xl lg:text-9xl">Acapul'co</h1>
+      <h2 class="absolute -mt-[500px] font-concert-one text-3xl text-Extended/true-gray/50 md:text-4xl lg:-mt-[460px] lg:text-6xl">
+        Festival
+      </h2>
+    </div>
     <!-- Format Mobile -->
     <div class="md:hidden">
       <div class="mx-7 mt-7 font-lato text-xs text-Extended/true-gray/50">
