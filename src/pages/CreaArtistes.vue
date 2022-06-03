@@ -123,7 +123,7 @@ export default {
         const db = getFirestore();
         const docRef = addDoc(collection(db, "Artistes"), this.Artistes);
       });
-      this.$router.push("/gestionartiste");
+      this.$router.push("/gestionartistes");
       this.$router.push("/artistes");
     },
   },
