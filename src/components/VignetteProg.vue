@@ -17,25 +17,27 @@
 
   <!-- Composant Desktop -->
   <div class="group hidden flex-col items-center md:flex">
-    <div class="relative">
-      <PlusIcon
-        class="
-          absolute
-          top-1/2
-          left-1/2
-          -ml-6
-          -mt-6
-          h-12
-          w-12
-          text-Extended/true-gray/50
-          opacity-0
-          transition-opacity
-          duration-75
-          group-hover:opacity-100
-        "
-      />
-      <img class="w-full object-cover hover:opacity-40" :src="image" alt="" />
-    </div>
+    <RouterLink :to="lien">
+      <div class="relative">
+        <PlusIcon
+          class="
+            absolute
+            top-1/2
+            left-1/2
+            -ml-6
+            -mt-6
+            h-12
+            w-12
+            text-Extended/true-gray/50
+            opacity-0
+            transition-opacity
+            duration-75
+            group-hover:opacity-100
+          "
+        />
+        <img class="w-full object-cover hover:opacity-40" :src="image" alt="" />
+      </div>
+    </RouterLink>
     <h2 class="mt-5 font-concert-one text-3xl text-Extended/true-gray/50">{{ nom }}</h2>
     <p class="mt-5 font-lato text-lg text-Extended/amber/300">{{ date }}</p>
   </div>
