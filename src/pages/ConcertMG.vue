@@ -26,40 +26,28 @@
       <h3 class="font-lato text-sm text-Extended/true-gray/50 md:text-xl lg:text-2xl">Lieu :</h3>
       <p class="mt-2 font-lato text-xs text-Extended/true-gray/50 md:text-base lg:text-xl">Scène Pul’co Playa - Plage des Ayguades</p>
       <div class="relative mt-2 flex flex-shrink-0 flex-grow-0 items-start justify-start gap-[13px] self-stretch md:hidden">
+        <img class="h-[138px] w-[147px] flex-shrink-0 flex-grow-0 rounded-[10px] object-cover" src="/images/concert_scene1.webp" alt="" />
         <img
           class="h-[138px] w-[147px] flex-shrink-0 flex-grow-0 rounded-[10px] object-cover"
-          src="../../public/images/concert_scene1.webp"
-          alt=""
-        />
-        <img
-          class="h-[138px] w-[147px] flex-shrink-0 flex-grow-0 rounded-[10px] object-cover"
-          src="../../public/images/concert_scene1_carte.webp"
+          src="/images/concert_scene1_carte.webp"
           alt=""
         />
       </div>
       <!-- Ipad -->
       <div class="relative mt-2 hidden flex-shrink-0 flex-grow-0 items-start justify-center gap-16 self-stretch pb-5 md:flex lg:hidden">
+        <img class="h-[254px] w-[248px] flex-shrink-0 flex-grow-0 rounded-[10px] object-cover" src="/images/concert_scene1.webp" alt="" />
         <img
           class="h-[254px] w-[248px] flex-shrink-0 flex-grow-0 rounded-[10px] object-cover"
-          src="../../public/images/concert_scene1.webp"
-          alt=""
-        />
-        <img
-          class="h-[254px] w-[248px] flex-shrink-0 flex-grow-0 rounded-[10px] object-cover"
-          src="../../public/images/concert_scene1_carte.webp"
+          src="/images/concert_scene1_carte.webp"
           alt=""
         />
       </div>
       <!-- Desktop -->
       <div class="relative mt-2 hidden flex-shrink-0 flex-grow-0 items-start justify-center gap-16 self-stretch pb-5 lg:flex">
+        <img class="h-[310px] w-[330px] flex-shrink-0 flex-grow-0 rounded-[10px] object-cover" src="/images/concert_scene1.webp" alt="" />
         <img
           class="h-[310px] w-[330px] flex-shrink-0 flex-grow-0 rounded-[10px] object-cover"
-          src="../../public/images/concert_scene1.webp"
-          alt=""
-        />
-        <img
-          class="h-[310px] w-[330px] flex-shrink-0 flex-grow-0 rounded-[10px] object-cover"
-          src="../../public/images/concert_scene1_carte.webp"
+          src="/images/concert_scene1_carte.webp"
           alt=""
         />
       </div>

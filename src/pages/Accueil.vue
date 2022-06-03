@@ -5,7 +5,7 @@
     <Header class="relative z-10" />
     <img
       class="-mt-[85px] max-h-[812px] min-h-[812px] w-full object-cover"
-      src="../../public/images/acc_fond.webp"
+      src="/images/acc_fond.webp"
       alt="Image de la plage lors du Festival"
     />
     <div class="flex flex-col items-center">
@@ -125,7 +125,7 @@
     <div class="hidden flex-row gap-[50px] md:flex lg:gap-[106px]">
       <img
         class="mt-[75px] ml-14 h-[386px] w-[506px] rounded-17xl object-cover"
-        src="../../public/images/acc_into.webp"
+        src="/images/acc_into.webp"
         alt="Image de personne qui font la fête"
       />
       <div class="flex flex-col gap-8">
@@ -148,15 +148,15 @@
 
     <!-- Images et Contenus de Présentation -->
     <div class="md:hidden">
-      <img class="w-full object-cover px-11 py-20" src="../../public/images/acc_scene.webp" alt="Image de la Scène Pulco Playa" />
+      <img class="w-full object-cover px-11 py-20" src="/images/acc_scene.webp" alt="Image de la Scène Pulco Playa" />
       <p class="mx-24 my-6 text-center font-lato text-[12px] text-Extended/true-gray/50">
         Deux grandes scènes pour vous offir le plus beau des spectacles.
       </p>
-      <img class="w-full object-cover px-11 py-6" src="../../public/images/acc_concert.webp" alt="Image lors d'un concert" />
+      <img class="w-full object-cover px-11 py-6" src="/images/acc_concert.webp" alt="Image lors d'un concert" />
       <p class="mx-24 my-6 text-center font-lato text-[12px] text-Extended/true-gray/50">
         Plongez dans un monde imaginaire, parcourez nos nombreux stands...
       </p>
-      <img class="w-full object-cover px-11 py-6" src="../../public/images/acc_feux.webp" alt="Image des feux d'artifices" />
+      <img class="w-full object-cover px-11 py-6" src="/images/acc_feux.webp" alt="Image des feux d'artifices" />
       <p class="mx-24 my-6 text-center font-lato text-[12px] text-Extended/true-gray/50">
         ... et venez découvrir les surprises qui vous attendent.
       </p>
@@ -166,7 +166,7 @@
       <div class="mx-10 flex flex-row gap-[25px] lg:gap-[103px]">
         <img
           class="h-[219px] w-[357px] rounded-17xl object-cover lg:h-[319px] lg:w-[519px]"
-          src="../../public/images/acc_scene.webp"
+          src="/images/acc_scene.webp"
           alt="Image de la Scène Pulco Playa"
         />
         <p class="mx-24 mt-28 font-lato text-xl text-Extended/true-gray/50">
@@ -179,14 +179,14 @@
         </p>
         <img
           class="h-[219px] w-[357px] rounded-17xl object-cover lg:h-[319px] lg:w-[519px]"
-          src="../../public/images/acc_concert.webp"
+          src="/images/acc_concert.webp"
           alt="Image lors d'un concert"
         />
       </div>
       <div class="mx-10 flex flex-row gap-[25px] lg:gap-[103px]">
         <img
           class="h-[219px] w-[357px] rounded-17xl object-cover lg:h-[319px] lg:w-[519px]"
-          src="../../public/images/acc_feux.webp"
+          src="/images/acc_feux.webp"
           alt="Image des feux d'artifices"
         />
         <p class="mx-24 mt-28 font-lato text-xl text-Extended/true-gray/50">... et venez découvrir les surprises qui vous attendent.</p>

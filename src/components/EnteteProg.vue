@@ -1,6 +1,6 @@
 <template>
   <div class="relative top-0 z-20">
-    <img class="absolute w-full object-cover opacity-50 md:max-h-[450px] lg:max-h-80" src="../../public/images/prog_img1.webp" alt="" />
+    <img class="absolute w-full object-cover opacity-50 md:max-h-[450px] lg:max-h-80" src="/images/prog_img1.webp" alt="" />
     <h1 class="absolute mt-16 ml-5 font-concert-one text-3xl text-Extended/true-gray/50">Programmes</h1>
   </div>
   <div class="relative -bottom-52 z-20 ml-5 flex justify-center gap-2 md:-bottom-[385px] lg:-bottom-[330px]">

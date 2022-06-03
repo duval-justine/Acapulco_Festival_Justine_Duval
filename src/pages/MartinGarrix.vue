@@ -21,61 +21,41 @@
         <h2 class="mt-14 font-lato text-base text-Extended/true-gray/50 lg:mx-24 lg:text-lg">Quelques images :</h2>
         <div class="mt-2 flex w-full snap-x gap-9 overflow-x-auto pb-5 md:hidden">
           <div class="shrink-0 snap-center first:pl-5 last:pr-5">
-            <img class="max-h-[222px] w-full object-cover" src="../../public/images/mg1.png" alt="Photographie de Martin Garrix" />
+            <img class="max-h-[222px] w-full object-cover" src="/images/mg1.png" alt="Photographie de Martin Garrix" />
           </div>
           <div class="shrink-0 snap-center first:pl-5 last:pr-5">
-            <img class="max-h-[222px] w-full object-cover" src="../../public/images/mg2.png" alt="Concert vue de la scène" />
+            <img class="max-h-[222px] w-full object-cover" src="/images/mg2.png" alt="Concert vue de la scène" />
           </div>
           <div class="shrink-0 snap-center first:pl-5 last:pr-5">
-            <img
-              class="max-h-[222px] w-full object-cover"
-              src="../../public/images/mg3.png"
-              alt="Concert vue de la scène avec Martin Garrix de face"
-            />
+            <img class="max-h-[222px] w-full object-cover" src="/images/mg3.png" alt="Concert vue de la scène avec Martin Garrix de face" />
           </div>
           <div class="shrink-0 snap-center first:pl-5 last:pr-5">
-            <img
-              class="max-h-[222px] w-full object-cover"
-              src="../../public/images/mg4.png"
-              alt="Concert vue de la scène avec Martin Garrix de face"
-            />
+            <img class="max-h-[222px] w-full object-cover" src="/images/mg4.png" alt="Concert vue de la scène avec Martin Garrix de face" />
           </div>
           <div class="shrink-0 snap-center first:pl-5 last:pr-5">
-            <img class="max-h-[222px] w-full object-cover" src="../../public/images/mg5.png" alt="Concert vue de la scène" />
+            <img class="max-h-[222px] w-full object-cover" src="/images/mg5.png" alt="Concert vue de la scène" />
           </div>
           <div class="shrink-0 snap-center first:pl-5 last:pr-5">
-            <img class="max-h-[222px] w-full object-cover" src="../../public/images/mg6.png" alt="Identité Visuelle" />
+            <img class="max-h-[222px] w-full object-cover" src="/images/mg6.png" alt="Identité Visuelle" />
           </div>
         </div>
         <!-- Format Desktop -->
         <div class="mx-24 hidden md:grid">
           <div class="grid grid-cols-[repeat(auto-fit,minmax(223px,1fr))] items-center justify-between gap-4">
+            <img class="max-h-[300px] w-full object-cover lg:max-h-[377.04px]" src="/images/mg1.png" alt="Photographie de Martin Garrix" />
+            <img class="max-h-[300px] w-full object-cover lg:max-h-[377.04px]" src="/images/mg2.png" alt="Concert vue de la scène" />
             <img
               class="max-h-[300px] w-full object-cover lg:max-h-[377.04px]"
-              src="../../public/images/mg1.png"
-              alt="Photographie de Martin Garrix"
-            />
-            <img
-              class="max-h-[300px] w-full object-cover lg:max-h-[377.04px]"
-              src="../../public/images/mg2.png"
-              alt="Concert vue de la scène"
-            />
-            <img
-              class="max-h-[300px] w-full object-cover lg:max-h-[377.04px]"
-              src="../../public/images/mg3.png"
+              src="/images/mg3.png"
               alt="Concert vue de la scène avec Martin Garrix de face"
             />
             <img
               class="max-h-[300px] w-full object-cover lg:max-h-[377.04px]"
-              src="../../public/images/mg4.png"
+              src="/images/mg4.png"
               alt="Concert vue de la scène avec Martin Garrix de face"
             />
-            <img
-              class="max-h-[300px] w-full object-cover lg:max-h-[377.04px]"
-              src="../../public/images/mg5.png"
-              alt="Concert vue de la scène"
-            />
-            <img class="max-h-[300px] w-full object-cover lg:max-h-[377.04px]" src="../../public/images/mg6.png" alt="Identité Visuelle" />
+            <img class="max-h-[300px] w-full object-cover lg:max-h-[377.04px]" src="/images/mg5.png" alt="Concert vue de la scène" />
+            <img class="max-h-[300px] w-full object-cover lg:max-h-[377.04px]" src="/images/mg6.png" alt="Identité Visuelle" />
           </div>
         </div>
       </div>

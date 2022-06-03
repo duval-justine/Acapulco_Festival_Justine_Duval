@@ -10,7 +10,7 @@
       </div>
       <img
         class="absolute -mt-[225px] ml-5 h-[237px] w-[267px] lg:ml-[40px] lg:-mt-[413px] lg:h-[473px] lg:w-[532.87px]"
-        src="../../public/images/martin_garrix.png"
+        src="/images/martin_garrix.png"
         alt=""
       />
     </div>

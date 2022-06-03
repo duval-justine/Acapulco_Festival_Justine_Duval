@@ -135,6 +135,7 @@ export default {
       nom: null,
       listeArtistes: [],
       listeArtistesSynchro: [],
+      filter: "",
     };
   },
   mounted() {

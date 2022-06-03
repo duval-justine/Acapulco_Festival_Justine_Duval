@@ -2,7 +2,39 @@
   <header>
     <Header />
   </header>
-  <!-- Création d'une nouvelle fiche -->
+  <h5 class="mt-14 text-center font-concert-one text-3xl font-bold text-Extended/true-gray/50">Création de fiche Artiste</h5>
+  <!-- <section class="mx-2 pb-6 md:m-auto md:max-w-[70%] lg:max-w-[50%] lg:pb-14">
+    <form @submit.prevent="createArtiste">
+      <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
+        <div class="grid place-items-center">
+          <img :src="imageData" class="w-1/2" />
+        </div>
+        <div class="grid grid-cols-1 gap-14">
+          <div class="flex h-10 overflow-hidden rounded-sm bg-zinc-400 font-lato text-black">
+            <div class="bg-true-gray-25 flex items-center justify-center border-[1px] px-5">Nom</div>
+            <input class="w-full bg-gray-300 font-lato" type="text" placeholder="Nom de l'artiste" v-model="artistes.nom" required />
+          </div>
+
+          <div class="flex h-10 overflow-hidden rounded-sm bg-zinc-400 text-black">
+            <div class="bg-true-gray-25 flex items-center justify-center border-[1px] px-5 font-lato">Photo</div>
+            <div class="relative w-full">
+              <input type="file" class="relative w-full" ref="file" id="file" @change="previewImage" />
+              <label class="absolute left-0 top-0 bottom-0 flex w-full items-center justify-center bg-gray-300 font-lato" for="file"
+                >Sélectionner l'image</label
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-16 grid w-full grid-cols-2 place-items-center">
+        <button class="w-fit rounded-xl bg-red-700 px-16 py-4 font-lato text-white" type="submit">Ajouter</button>
+        <button class="w-fit rounded-xl bg-red-700 px-16 py-4 font-lato text-white" type="button">
+          <RouterLink to="/gestion">Annuler</RouterLink>
+        </button>
+      </div>
+    </form>
+  </section> -->
+  <!-- Création d'une nouvelle fiche
   <div>
     <div>
       <form enctype="multipart/form-data" @submit.prevent="createArtiste">
@@ -64,7 +96,7 @@
         </div>
       </form>
     </div>
-  </div>
+  </div> -->
 </template>
 
 <script>
@@ -119,9 +151,9 @@ export default {
 
     previewImage: function (event) {
       this.file = this.$refs.file.files[0];
-      this.artiste.image = this.file.name;
+      this.Artistes.image = this.file.name;
       var input = event.target;
-      if (input.files && input.files[8]) {
+      if (input.files && input.files[0]) {
         var reader = new FileReader();
         reader.onload = (e) => {
           this.imageData = e.target.result;
@@ -132,13 +164,15 @@ export default {
 
     async createArtiste() {
       const storage = getStorage();
-      const refStorage = ref(storage, "Artistes/" + this.artiste.image);
+      const refStorage = ref(storage, "Artistes/" + this.Artistes.image);
+      console.log("refStorage", refStorage);
       await uploadString(refStorage, this.imageData, "data_url").then((snapshot) => {
-        console.log("Upload a base64 string");
+        console.log("Uploaded a base64 string");
         const db = getFirestore();
-        const docRef = addDoc(collection(db, "Artistes"), this.artiste);
+        const docRef = addDoc(collection(db, "Artistes"), this.Artistes);
       });
-      this.$router.push("/artistes");
+      // redirection sur la liste des  artistes
+      this.$router.push("/artistesadmin");
     },
   },
 };
