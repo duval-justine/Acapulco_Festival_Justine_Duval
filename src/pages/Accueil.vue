@@ -13,8 +13,11 @@
       <h2 class="absolute -mt-[500px] font-concert-one text-3xl text-Extended/true-gray/50 md:text-4xl lg:-mt-[460px] lg:text-6xl">
         Festival
       </h2>
+      <a href="#down">
+        <ChevronDownIcon class="-mt-[100px] h-16 w-16 text-Extended/true-gray/50" />
+      </a>
     </div>
-    <div class="bg-Extended/amber/500 pt-14">
+    <div class="bg-Extended/amber/500 pt-14" id="down">
       <!-- Carrousel au format mobile -->
       <div id="carouselExampleSlidesOnly" class="slide carousel relative md:hidden lg:hidden" data-bs-ride="carousel">
         <div class="carousel-inner relative w-full overflow-hidden">
@@ -232,7 +235,8 @@ import VignetteCarrousel from "../components/CarrouselAcc.vue";
 import Bouton from "../components/Bouton.vue";
 import Line from "../components/icons/Line2.vue";
 import Footer from "../components/Footer.vue";
+import { ChevronDownIcon } from "@heroicons/vue/outline";
 export default {
-  components: { Header, Bouton, VignetteCarrousel, Footer, Line },
+  components: { Header, Bouton, VignetteCarrousel, Footer, Line, ChevronDownIcon },
 };
 </script>
