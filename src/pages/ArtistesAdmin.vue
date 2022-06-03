@@ -1,0 +1,219 @@
+<template>
+  <!-- Header -->
+  <header>
+    <Header />
+  </header>
+  <!-- Contenus -->
+  <main>
+    <h1 class="mt-12 font-concert-one text-3xl text-Extended/true-gray/50">Artistes</h1>
+
+    <!-- Mobile -->
+    <div class="md:hidden">
+      <Vignette
+        class="mt-12 pb-52"
+        v-for="artiste in listeArtistesSynchro"
+        :key="artiste.id"
+        :image="artiste.image"
+        :nom="artiste.nom"
+        :date="artiste.date"
+        :lien="artiste.lien"
+        actif
+      />
+    </div>
+    <!-- <div class="md:hidden">
+      <Vignette class="mt-12 pb-52" image="/images/prog_daw.webp" nom="Alan Walker" date="Jeudi 7 juillet" lien="/" actif />
+      <Vignette class="mt-12 pb-52" image="/images/prog_dalesso.webp" nom="Alesso" date="Dimanche 10 juillet" lien="/" actif />
+      <Vignette class="mt-12 pb-52" image="/images/prog_dal.webp" nom="Amélie Lens" date="Vendredi 8 & Samedi 9 juillet" lien="/" actif />
+      <Vignette class="mt-12 pb-52" image="/images/prog_dbj.webp" nom="B Jones" date="Jeudi 7 juillet" lien="/" actif />
+      <Vignette class="mt-12 pb-52" image="/images/prog_deluize.webp" nom="Eluize" date="Samedi 9 juillet" lien="/" actif />
+      <Vignette class="mt-12 pb-52" image="/images/prog_dfj.webp" nom="Felix Jaehn" date="Vendredi 9 juillet" lien="/" actif />
+      <Vignette class="mt-12 pb-52" image="/images/prog_dhfr.webp" nom="Henri PFR" date="Samedi 9 & Dimanche 10 juillet" lien="/" actif />
+      <Vignette class="mt-12 pb-52" image="/images/prog_dawjc.webp" nom="Joel Corry" date="Jeudi 7 juillet" lien="/" actif />
+      <Vignette class="mt-12 pb-52" image="/images/prog_dawlp.webp" nom="Lilly Palmer" date="Jeudi 7 & Samedi 9 juillet" lien="/" actif />
+      <Vignette
+        class="mt-12 pb-52"
+        image="/images/prog_dlf.webp"
+        nom="Lost Frequencies"
+        date="Vendredi 9 & Samedi 9 juillet"
+        lien="/"
+        actif
+      />
+      <Vignette class="mt-12 pb-12" image="/images/prog_dlpg.webp" nom="LP Giobbi" date="Vendredi 9 juillet" lien="/" actif />
+      <Vignette class="mt-12 pb-52" image="/images/prog_dmadeon.webp" nom="Madeon" date="Samedi 9 juillet" lien="/" actif />
+      <Vignette class="mt-12 pb-52" image="/images/prog_dmt.webp" nom="Marina Trench" date="Jeudi 7 juillet" lien="/" actif />
+      <Vignette class="mt-12 pb-52" image="/images/prog_dmg.webp" nom="Martin Garrix" date="Samedi 9 juillet" lien="/" actif />
+      <Vignette class="mt-12 pb-52" image="/images/prog_dmattn.webp" nom="MATTN" date="Samedi 9 & Dimanche10 juillet" lien="/" actif />
+      <Vignette class="mt-12 pb-52" image="/images/prog_dmw.webp" nom="Mike Williams" date="Jeudi 7 juillet" lien="/" actif />
+      <Vignette class="mt-12 pb-52" image="/images/prog_dofen.webp" nom="Ofenbach" date="Samedi 9 & Dimanche10 juillet" lien="/" actif />
+      <Vignette class="mt-12 pb-52" image="/images/prog_dawpb.webp" nom="Petit Biscuit" date="Vendredi 9 juillet" lien="/" actif />
+      <Vignette class="mt-12 pb-52" image="/images/prog_dpp.webp" nom="Pretty Pink" date="Jeudi 7 juillet" lien="/" actif />
+      <Vignette class="mt-12 pb-52" image="/images/prog_dsh.webp" nom="Seth Hills" date="Vendredi 9 juillet" lien="/" actif />
+      <Vignette class="mt-12 pb-52" image="/images/prog_dtopic.webp" nom="Topic" date="Vendredi 9 juillet" lien="/" actif />
+      <Vignette class="mt-12 pb-52" image="/images/prog_durt.webp" nom="U.R.TRAX" date="Vendredi 9 juillet" lien="/" actif />
+      <Vignette class="mt-12 pb-52" image="/images/prog_dy.webp" nom="Yuksek" date="Jeudi 7 juillet" lien="/" actif />
+    </div> -->
+    <!-- Reponsive -->
+    <div class="hidden md:flex">
+      <div class="mx-12 mt-20 mb-20 grid w-11/12 grid-cols-[repeat(auto-fit,minmax(300px,1fr))] items-center justify-between gap-x-12">
+        <Vignette
+          class="mt-12 pb-52"
+          v-for="artiste in listeArtistesSynchro"
+          :key="artiste.id"
+          :image="artiste.image"
+          :nom="artiste.nom"
+          :date="artiste.date"
+          :lien="artiste.lien"
+          actif
+        />
+        <!-- <Vignette class="mt-12 pb-52" image="/images/prog_daw.webp" nom="Alan Walker" date="Jeudi 7 juillet" lien="/" actif />
+        <Vignette class="mt-12 pb-52" image="/images/prog_dalesso.webp" nom="Alesso" date="Dimanche 10 juillet" lien="/" actif />
+        <Vignette class="mt-12 pb-52" image="/images/prog_dal.webp" nom="Amélie Lens" date="Vendredi 8 & Samedi 9 juillet" lien="/" actif />
+        <Vignette class="mt-12 pb-52" image="/images/prog_dbj.webp" nom="B Jones" date="Jeudi 7 juillet" lien="/" actif />
+        <Vignette class="mt-12 pb-52" image="/images/prog_deluize.webp" nom="Eluize" date="Samedi 9 juillet" lien="/" actif />
+        <Vignette class="mt-12 pb-52" image="/images/prog_dfj.webp" nom="Felix Jaehn" date="Vendredi 9 juillet" lien="/" actif />
+        <Vignette class="mt-12 pb-52" image="/images/prog_dhfr.webp" nom="Henri PFR" date="Samedi 9 & Dimanche 10 juillet" lien="/" actif />
+        <Vignette class="mt-12 pb-52" image="/images/prog_dawjc.webp" nom="Joel Corry" date="Jeudi 7 juillet" lien="/" actif />
+        <Vignette class="mt-12 pb-52" image="/images/prog_dawlp.webp" nom="Lilly Palmer" date="Jeudi 7 & Samedi 9 juillet" lien="/" actif />
+        <Vignette
+          class="mt-12 pb-52"
+          image="/images/prog_dlf.webp"
+          nom="Lost Frequencies"
+          date="Vendredi 9 & Samedi 9 juillet"
+          lien="/"
+          actif
+        />
+        <Vignette class="mt-12 pb-52" image="/images/prog_dlpg.webp" nom="LP Giobbi" date="Vendredi 9 juillet" lien="/" actif />
+        <Vignette class="mt-12 pb-52" image="/images/prog_dmadeon.webp" nom="Madeon" date="Samedi 9 juillet" lien="/" actif />
+        <Vignette class="mt-12 pb-52" image="/images/prog_dmt.webp" nom="Marina Trench" date="Jeudi 7 juillet" lien="/" actif />
+        <Vignette class="mt-12 pb-52" image="/images/prog_dmg.webp" nom="Martin Garrix" date="Samedi 9 juillet" lien="/" actif />
+        <Vignette class="mt-12 pb-52" image="/images/prog_dmattn.webp" nom="MATTN" date="Samedi 9 & Dimanche10 juillet" lien="/" actif />
+        <Vignette class="mt-12 pb-52" image="/images/prog_dmw.webp" nom="Mike Williams" date="Jeudi 7 juillet" lien="/" actif />
+        <Vignette class="mt-12 pb-52" image="/images/prog_dofen.webp" nom="Ofenbach" date="Samedi 9 & Dimanche10 juillet" lien="/" actif />
+        <Vignette class="mt-12 pb-52" image="/images/prog_dawpb.webp" nom="Petit Biscuit" date="Vendredi 9 juillet" lien="/" actif />
+        <Vignette class="mt-12 pb-52" image="/images/prog_dpp.webp" nom="Pretty Pink" date="Jeudi 7 juillet" lien="/" actif />
+        <Vignette class="mt-12 pb-52" image="/images/prog_dsh.webp" nom="Seth Hills" date="Vendredi 9 juillet" lien="/" actif />
+        <Vignette class="mt-12 pb-52" image="/images/prog_dtopic.webp" nom="Topic" date="Vendredi 9 juillet" lien="/" actif />
+        <Vignette class="mt-12 pb-52" image="/images/prog_durt.webp" nom="U.R.TRAX" date="Vendredi 9 juillet" lien="/" actif />
+        <Vignette class="mt-12 pb-52" image="/images/prog_dy.webp" nom="Yuksek" date="Jeudi 7 juillet" lien="/" actif /> -->
+      </div>
+    </div>
+  </main>
+  <!-- Footer -->
+  <footer>
+    <Footer />
+  </footer>
+</template>
+
+<script>
+import Header from "../components/Header.vue";
+import Vignette from "../components/VignetteArtistes.vue";
+import Footer from "../components/Footer.vue";
+import {
+  getFirestore, // Obtenir le Firestore
+  collection, // Utiliser une collection de documents
+  doc, // Obtenir un document par son id
+  getDocs, // Obtenir la liste des documents d'une collection
+  addDoc, // Ajouter un document à une collection
+  updateDoc, // Mettre à jour un document dans une collection
+  deleteDoc, // Supprimer un document d'une collection
+  onSnapshot, // Demander une liste de documents d'une collection, en les synchronisant
+  query, // Permet d'effectuer des requêtes sur Firestore
+  orderBy, // Permet de demander le tri d'une requête query
+} from "https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js";
+
+// Cloud Storage : import des fonctions
+import {
+  getStorage, // Obtenir le Cloud Storage
+  ref, // Pour créer une référence à un fichier à uploader
+  getDownloadURL, // Permet de récupérer l'adress complète d'un fichier du Storage
+  uploadString, // Permet d'uploader sur le Cloud Storage une image en Base64
+} from "https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js";
+
+export default {
+  components: { Header, Vignette, Footer },
+  data() {
+    return {
+      nom: null,
+      listeArtistesSynchro: [],
+      imageData: null,
+      artiste: {
+        nom: null,
+        date: null,
+        image: null,
+        lien: null,
+      },
+    };
+  },
+  mounted() {
+    this.getArtistesSynchro();
+  },
+  methods: {
+    async getArtistesSynchro() {
+      const firestore = getFirestore();
+      const dbArtiste = collection(firestore, "Artistes");
+      const q = query(dbArtiste, orderBy("nom", "asc"));
+      await onSnapshot(q, (snapshot) => {
+        this.listeArtistesSynchro = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+
+        this.listeArtistesSynchro.forEach(function (artiste) {
+          const storage = getStorage();
+          const spaceRef = ref(storage, "Artistes/" + artiste.image);
+          getDownloadURL(spaceRef)
+            .then((url) => {
+              artiste.image = url;
+            })
+            .catch((error) => {
+              console.log("erreur downloadUrl", error);
+            });
+        });
+      });
+    },
+
+    previewImage: function (event) {
+      this.file = this.$refs.file.files[0];
+      this.artiste.image = this.file.name;
+      var input = event.target;
+      if (input.files && input.files[8]) {
+        var reader = new FileReader();
+        reader.onload = (e) => {
+          this.imageData = e.target.result;
+        };
+        reader.readAsDataURL(input.files[0]);
+      }
+    },
+
+    async createArtiste() {
+      const firestore = getFirestore();
+      // Base de données (collection)  document pays
+      const dbArtistes = collection(firestore, "Artistes");
+      // On passe en paramètre format json
+      // Les champs à mettre à jour
+      // Sauf le id qui est créé automatiquement
+      const docRef = await addDoc(dbArtistes, {
+        Nom: this.Nom,
+      });
+      console.log("document créé avec le id : ", docRef.id);
+      this.$router.push("/artistes");
+    },
+  },
+  // async createArtistes(){
+  //               // Obtenir Firestore
+  //               const firestore = getFirestore();
+  //               // Base de données (collection)  document pays
+  //               const dbArtistes= collection(firestore, "Artistes");
+  //               // On passe en paramètre format json
+  //               // Les champs à mettre à jour
+  //               // Sauf le id qui est créé automatiquement
+  //               const docRef = await addDoc(dbArtistes,{
+  //                   Nom: this.Nom,
+};
+</script>
+
+<style scoped>
+a {
+  color: white;
+}
+a:hover {
+  text-decoration: none;
+}
+</style>
