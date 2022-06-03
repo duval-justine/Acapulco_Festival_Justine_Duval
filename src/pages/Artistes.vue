@@ -7,6 +7,18 @@
   <main>
     <h1 class="mt-12 font-concert-one text-3xl text-Extended/true-gray/50">Artistes</h1>
     <!-- Mobile -->
+    <div class="md:hidden">
+      <Vignette
+        class="mt-12 pb-52"
+        v-for="artiste in listeArtistesSynchro"
+        :key="artiste.id"
+        :image="artiste.image"
+        :nom="artiste.nom"
+        :date="artiste.date"
+        :lien="artiste.lien"
+        :actif="artiste.actif"
+      />
+    </div>
     <!-- <div class="md:hidden">
       <Vignette class="mt-12 pb-52" image="/images/prog_daw.webp" nom="Alan Walker" date="Jeudi 7 juillet" lien="/" actif />
       <Vignette class="mt-12 pb-52" image="/images/prog_dalesso.webp" nom="Alesso" date="Dimanche 10 juillet" lien="/" actif />
@@ -43,13 +55,14 @@
     <div class="hidden md:flex">
       <div class="mx-12 mt-20 mb-20 grid w-11/12 grid-cols-[repeat(auto-fit,minmax(300px,1fr))] items-center justify-between gap-x-12">
         <Vignette
+          class="mt-12 pb-52"
           v-for="artiste in listeArtistesSynchro"
           :key="artiste.id"
           :image="artiste.image"
           :nom="artiste.nom"
           :date="artiste.date"
           :lien="artiste.lien"
-          actif
+          :actif="artiste.actif"
         />
         <!-- <Vignette class="mt-12 pb-52" image="/images/prog_daw.webp" nom="Alan Walker" date="Jeudi 7 juillet" lien="/" actif />
         <Vignette class="mt-12 pb-52" image="/images/prog_dalesso.webp" nom="Alesso" date="Dimanche 10 juillet" lien="/" actif />
@@ -135,12 +148,12 @@ export default {
       await onSnapshot(q, (snapshot) => {
         this.listeArtistesSynchro = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
 
-        this.listeArtistesSynchro.forEach(function (personne) {
+        this.listeArtistesSynchro.forEach(function (Artistes) {
           const storage = getStorage();
-          const spaceRef = ref(storage, "Artistes/" + personne.photo);
+          const spaceRef = ref(storage, "Artistes/" + Artistes.image);
           getDownloadURL(spaceRef)
             .then((url) => {
-              personne.photo = url;
+              Artistes.image = url;
             })
             .catch((error) => {
               console.log("erreur downloadUrl", error);
@@ -148,6 +161,10 @@ export default {
         });
       });
     },
+    // dateFr(d) {
+    //   let date = d.split("-");
+    //   return date[2] + "/" + date[1] + "/" + date[0];
+    // },
   },
 };
 </script>
