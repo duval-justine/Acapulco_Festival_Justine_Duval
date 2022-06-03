@@ -6,6 +6,7 @@ import ProgrammationJeudi from '../pages/ProgrammationJeudi.vue'
 import ProgrammationVendredi from '../pages/ProgrammationVendredi.vue'
 import ConcertMG from '../pages/ConcertMG.vue'
 import Artistes from '../pages/Artistes.vue'
+import ArtistesAdmin from '../pages/ArtistesAdmin.vue'
 import MartinGarrix from '../pages/MartinGarrix.vue'
 import Festival from '../pages/Festival.vue'
 import MentionsLegales from '../pages/MentionsLegales.vue'
@@ -14,6 +15,8 @@ import Message from '../pages/Message.vue'
 import Page404 from '../pages/View404.vue'
 import Connexion from '../pages/Connexion.vue'
 import Inscription from '../pages/Inscription.vue'
+import GuideStyle from '../pages/GuideStyle.vue'
+import CreaArtistes from '../pages/CreaArtistes.vue'
 
 const router = createRouter({
     history: createWebHistory(),
@@ -24,6 +27,7 @@ const router = createRouter({
         { path: '/progvendredi', name: 'Programmation Vendredi', component: ProgrammationVendredi },
         { path: '/concertmg', name: 'Concert Martin Garrix', component: ConcertMG },
         { path: '/artistes', name: 'Artistes', component: Artistes },
+        { path: '/artistesadmin', name: 'ArtistesAdmin', component: ArtistesAdmin },
         { path: '/martingarrix', name: 'Artiste Martin Garrix', component: MartinGarrix },
         { path: '/festival', name: 'Festival', component: Festival },
         { path: '/mtnlegales', name: 'Mentions Légales', component: MentionsLegales },
@@ -32,6 +36,8 @@ const router = createRouter({
         { path: '/:pathMatch(.*)*', name: 'Page 404', component: Page404 },
         { path: '/connexion', name: 'Connexion', component: Connexion },
         { path: '/inscription', name: 'Inscription', component: Inscription },
+        { path: '/guidestyle', name: 'Guide de Style', component: GuideStyle },
+        { path: '/creaartistes', name: 'Creation d Artistes', component: CreaArtistes },
     ],
 })
 

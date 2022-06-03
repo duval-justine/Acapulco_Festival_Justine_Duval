@@ -4,7 +4,7 @@ import './index.css'
 import router from './router'
 
 // Import de mitt
-// import mitt from 'mitt';
+import mitt from 'mitt';
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-app.js";
