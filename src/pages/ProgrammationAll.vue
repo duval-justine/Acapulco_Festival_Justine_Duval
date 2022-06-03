@@ -13,6 +13,21 @@
       <!-- Format Mobile -->
       <div class="md:hidden">
         <div class="flex w-full snap-x gap-5 overflow-x-auto">
+          <div class="shrink-0 snap-center first:pl-5 last:pr-5" v-for="artiste in listeArtistesSynchro">
+            <Vignette
+              class="ml-4 shrink-0"
+              :key="artiste.id"
+              :image="artiste.image"
+              :nom="artiste.nom"
+              :date="artiste.date"
+              :lien="artiste.lien2"
+              actif
+            />
+          </div>
+        </div>
+      </div>
+      <!-- <div class="md:hidden">
+        <div class="flex w-full snap-x gap-5 overflow-x-auto">
           <div class="shrink-0 snap-center first:pl-5 last:pr-5">
             <Vignette
               class="ml-4 shrink-0"
@@ -119,10 +134,23 @@
             <Vignette class="ml-4 shrink-0" image="/images/prog_yuksek.webp" nom="Yuksek" date="Jeudi 7 juillet - 18h00 à 20h00" />
           </div>
         </div>
-      </div>
+      </div> -->
 
       <!-- Format Desktop -->
       <div class="hidden flex-col md:flex">
+        <div class="mx-12 mt-20 mb-20 grid w-11/12 grid-cols-[repeat(auto-fit,minmax(300px,1fr))] items-center justify-between gap-7">
+          <Vignette
+            v-for="artiste in listeArtistesSynchro"
+            :key="artiste.id"
+            :image="artiste.image"
+            :nom="artiste.nom"
+            :date="artiste.date"
+            :lien="artiste.lien2"
+            actif
+          />
+        </div>
+      </div>
+      <!-- <div class="hidden flex-col md:flex">
         <div class="mx-12 mt-20 mb-20 grid w-11/12 grid-cols-[repeat(auto-fit,minmax(300px,1fr))] items-center justify-between gap-7">
           <RouterLink to="/concertMG">
             <Vignette image="/images/prog_dmg.webp" nom="Martin Garrix" date="Samedi 9 juillet - 23h30 à 3h00" />
@@ -170,7 +198,7 @@
           <Vignette image="/images/prog_durt.webp" nom="U.R.TRAX" date="Vendredi 8 juillet - 18h00 à 20h00" />
           <Vignette image="/images/prog_dy.webp" nom="Yuksek" date="Jeudi 7 juillet - 18h00 à 20h00" />
         </div>
-      </div>
+      </div> -->
     </main>
     <footer class="bg-Extended/true-gray/900">
       <Footer />
@@ -183,8 +211,60 @@ import Entete from "../components/EnteteProg.vue";
 import Vignette from "../components/VignetteProg.vue";
 import Line from "../components/icons/Line.vue";
 import Footer from "../components/Footer.vue";
+import {
+  getFirestore, // Obtenir le Firestore
+  collection, // Utiliser une collection de documents
+  doc, // Obtenir un document par son id
+  getDocs, // Obtenir la liste des documents d'une collection
+  addDoc, // Ajouter un document à une collection
+  updateDoc, // Mettre à jour un document dans une collection
+  deleteDoc, // Supprimer un document d'une collection
+  onSnapshot, // Demander une liste de documents d'une collection, en les synchronisant
+  query, // Permet d'effectuer des requêtes sur Firestore
+  orderBy, // Permet de demander le tri d'une requête query
+} from "https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js";
+
+// Cloud Storage : import des fonctions
+import {
+  getStorage, // Obtenir le Cloud Storage
+  ref, // Pour créer une référence à un fichier à uploader
+  getDownloadURL, // Permet de récupérer l'adress complète d'un fichier du Storage
+  uploadString, // Permet d'uploader sur le Cloud Storage une image en Base64
+} from "https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js";
 
 export default {
   components: { Header, Entete, Vignette, Line, Footer },
+  data() {
+    return {
+      nom: null,
+      listeArtistes: [],
+      listeArtistesSynchro: [],
+    };
+  },
+  mounted() {
+    this.getArtistesSynchro();
+  },
+  methods: {
+    async getArtistesSynchro() {
+      const firestore = getFirestore();
+      const dbArtiste = collection(firestore, "Artistes");
+      const q = query(dbArtiste, orderBy("nom", "asc"));
+      await onSnapshot(q, (snapshot) => {
+        this.listeArtistesSynchro = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+
+        this.listeArtistesSynchro.forEach(function (Artistes) {
+          const storage = getStorage();
+          const spaceRef = ref(storage, "Artistes/" + Artistes.image);
+          getDownloadURL(spaceRef)
+            .then((url) => {
+              Artistes.image = url;
+            })
+            .catch((error) => {
+              console.log("erreur downloadUrl", error);
+            });
+        });
+      });
+    },
+  },
 };
 </script>
