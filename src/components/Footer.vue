@@ -24,7 +24,7 @@
       <div class="mt-8 flex justify-between gap-12 font-lato text-sm text-Extended/true-gray/50 lg:text-xl">
         <RouterLink to="/festival">Festival</RouterLink>
         <RouterLink to="/mtnlegales">Mentions Légales</RouterLink>
-        <RouterLink to="/">Contact</RouterLink>
+        <RouterLink to="/contact">Contact</RouterLink>
       </div>
 
       <div class="flex gap-6 pt-8">
