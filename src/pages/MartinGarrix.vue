@@ -4,20 +4,21 @@
   </header>
   <main>
     <div class="mx-8">
+      <Vignette />
       <div class="flex flex-col items-center">
-        <h1 class="mt-7 font-concert-one text-3xl text-Extended/true-gray/50">Martin Garrix</h1>
-        <h4 class="font-lato text-[12px] text-Extended/amber/500">Pul’co Playa - Samedi 9 juillet</h4>
+        <h1 class="mt-7 font-concert-one text-3xl text-Extended/true-gray/50 lg:text-5xl">Martin Garrix</h1>
+        <h4 class="font-lato text-[12px] text-Extended/amber/500 lg:text-xl">Pul’co Playa - Samedi 9 juillet</h4>
       </div>
-      <p class="mt-6 font-lato text-xs text-Extended/true-gray/50">
+      <p class="mt-6 font-lato text-xs text-Extended/true-gray/50 lg:mx-24 lg:text-lg">
         Martin Garrix est un DJ hollandais né en 1996 à Amsterdam. A l’âge de seulement 16 ans il sort son premier titre “Keygen” qui est un
         morceau électro dans un style épuré. En 2013, il sort son single “Animals” qui devient célèbre dans la scène de l’électro.
       </p>
-      <p class="mt-2 font-lato text-xs text-Extended/true-gray/50">
+      <p class="mt-2 font-lato text-xs text-Extended/true-gray/50 lg:mx-24 lg:text-lg">
         Martin Garrix est connu dans le monde entier pour ses singles, et il participe à de nombreux festivals en proposant des spectacles à
         couper le souffle qui sont inoubliables !
       </p>
       <div>
-        <h2 class="mt-14 font-lato text-base text-Extended/true-gray/50">Quelques images :</h2>
+        <h2 class="mt-14 font-lato text-base text-Extended/true-gray/50 lg:mx-24 lg:text-lg">Quelques images :</h2>
         <div class="mt-2 flex w-full snap-x gap-9 overflow-x-auto pb-5 md:hidden">
           <div class="shrink-0 snap-center first:pl-5 last:pr-5">
             <img class="max-h-[222px] w-full object-cover" src="../../public/images/mg1.png" alt="Photographie de Martin Garrix" />
