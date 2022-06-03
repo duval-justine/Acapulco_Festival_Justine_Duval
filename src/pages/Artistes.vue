@@ -5,12 +5,24 @@
   </header>
   <!-- Contenus -->
   <main>
-    <h1 class="mt-12 font-concert-one text-3xl text-Extended/true-gray/50">Artistes</h1>
+    <h1 class="mt-12 text-center font-concert-one text-3xl text-Extended/true-gray/50">Artistes</h1>
+
+    <div class="ml-44 mt-12 block w-full overflow-x-auto">
+      <div class="relative float-left w-[500px]">
+        <p class="font-lato text-lg text-Extended/true-gray/50">Rechercher</p>
+        <input
+          type="search"
+          class="h-10 w-full rounded-xl bg-Extended/true-gray/50 px-4 text-sm text-Extended/true-gray/900"
+          placeholder="Recherche par nom"
+          v-model="query"
+        />
+      </div>
+    </div>
     <!-- Mobile -->
     <div class="md:hidden">
       <Vignette
         class="mt-12 pb-52"
-        v-for="artiste in listeArtistesSynchro"
+        v-for="artiste in searchByName"
         :key="artiste.id"
         :image="artiste.image"
         :nom="artiste.nom"
@@ -56,7 +68,7 @@
       <div class="mx-12 mt-20 mb-20 grid w-11/12 grid-cols-[repeat(auto-fit,minmax(300px,1fr))] items-center justify-between gap-x-20">
         <Vignette
           class="mt-12 pb-52"
-          v-for="artiste in listeArtistesSynchro"
+          v-for="artiste in searchByName"
           :key="artiste.id"
           :image="artiste.image"
           :nom="artiste.nom"
@@ -136,8 +148,17 @@ export default {
       nom: null,
       listeArtistes: [],
       listeArtistesSynchro: [],
-      filter: "",
+      query: "",
     };
+  },
+
+  computed: {
+    searchByName() {
+      let query = this.query;
+      return this.listeArtistesSynchro.filter(function (Artistes) {
+        return Artistes.nom.includes(query);
+      });
+    },
   },
 
   mounted() {
