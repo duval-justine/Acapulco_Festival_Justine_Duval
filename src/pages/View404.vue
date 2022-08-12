@@ -120,7 +120,7 @@
               focus:outline-none
             "
           >
-            <i class="mdi mdi-arrow-left mr-2"></i>Retour
+            <a href="/"><i class="mdi mdi-arrow-left mr-2"></i>Retour</a>
           </button>
         </div>
       </div>
