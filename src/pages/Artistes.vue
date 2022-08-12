@@ -7,7 +7,7 @@
   <main>
     <h1 class="mt-12 text-center font-concert-one text-3xl text-Extended/true-gray/50">Artistes</h1>
 
-    <div class="ml-44 mt-12 block w-full overflow-x-auto">
+    <!-- <div class="ml-44 mt-12 block w-full overflow-x-auto">
       <div class="relative float-left w-[500px]">
         <p class="font-lato text-lg text-Extended/true-gray/50">Rechercher</p>
         <input
@@ -17,9 +17,11 @@
           v-model="query"
         />
       </div>
-    </div>
+    </div> -->
+
     <!-- Mobile -->
-    <div class="md:hidden">
+
+    <!-- <div class="md:hidden">
       <Vignette
         class="mt-12 pb-52"
         v-for="artiste in searchByName"
@@ -30,8 +32,9 @@
         :lien="artiste.lien"
         :actif="artiste.actif"
       />
-    </div>
-    <!-- <div class="md:hidden">
+    </div> -->
+
+    <div class="md:hidden">
       <Vignette class="mt-12 pb-52" image="/images/prog_daw.webp" nom="Alan Walker" date="Jeudi 7 juillet" lien="/" actif />
       <Vignette class="mt-12 pb-52" image="/images/prog_dalesso.webp" nom="Alesso" date="Dimanche 10 juillet" lien="/" actif />
       <Vignette class="mt-12 pb-52" image="/images/prog_dal.webp" nom="Amélie Lens" date="Vendredi 8 & Samedi 9 juillet" lien="/" actif />
@@ -62,11 +65,13 @@
       <Vignette class="mt-12 pb-52" image="/images/prog_dtopic.webp" nom="Topic" date="Vendredi 9 juillet" lien="/" actif />
       <Vignette class="mt-12 pb-52" image="/images/prog_durt.webp" nom="U.R.TRAX" date="Vendredi 9 juillet" lien="/" actif />
       <Vignette class="mt-12 pb-52" image="/images/prog_dy.webp" nom="Yuksek" date="Jeudi 7 juillet" lien="/" actif />
-    </div> -->
+    </div>
+
     <!-- Reponsive -->
+
     <div class="hidden md:flex">
       <div class="mx-12 mt-20 mb-20 grid w-11/12 grid-cols-[repeat(auto-fit,minmax(300px,1fr))] items-center justify-between gap-x-20">
-        <Vignette
+        <!-- <Vignette
           class="mt-12 pb-52"
           v-for="artiste in searchByName"
           :key="artiste.id"
@@ -75,8 +80,9 @@
           :date="artiste.date"
           :lien="artiste.lien"
           :actif="artiste.actif"
-        />
-        <!-- <Vignette class="mt-12 pb-52" image="/images/prog_daw.webp" nom="Alan Walker" date="Jeudi 7 juillet" lien="/" actif />
+        /> -->
+
+        <Vignette class="mt-12 pb-52" image="/images/prog_daw.webp" nom="Alan Walker" date="Jeudi 7 juillet" lien="/" actif />
         <Vignette class="mt-12 pb-52" image="/images/prog_dalesso.webp" nom="Alesso" date="Dimanche 10 juillet" lien="/" actif />
         <Vignette class="mt-12 pb-52" image="/images/prog_dal.webp" nom="Amélie Lens" date="Vendredi 8 & Samedi 9 juillet" lien="/" actif />
         <Vignette class="mt-12 pb-52" image="/images/prog_dbj.webp" nom="B Jones" date="Jeudi 7 juillet" lien="/" actif />
@@ -105,7 +111,7 @@
         <Vignette class="mt-12 pb-52" image="/images/prog_dsh.webp" nom="Seth Hills" date="Vendredi 9 juillet" lien="/" actif />
         <Vignette class="mt-12 pb-52" image="/images/prog_dtopic.webp" nom="Topic" date="Vendredi 9 juillet" lien="/" actif />
         <Vignette class="mt-12 pb-52" image="/images/prog_durt.webp" nom="U.R.TRAX" date="Vendredi 9 juillet" lien="/" actif />
-        <Vignette class="mt-12 pb-52" image="/images/prog_dy.webp" nom="Yuksek" date="Jeudi 7 juillet" lien="/" actif /> -->
+        <Vignette class="mt-12 pb-52" image="/images/prog_dy.webp" nom="Yuksek" date="Jeudi 7 juillet" lien="/" actif />
       </div>
     </div>
   </main>
