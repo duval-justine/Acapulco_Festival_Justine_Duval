@@ -5,20 +5,23 @@
     </header>
     <main class="mt-14">
       <Entete actif />
-      <div class="pt-[223px] lg:pt-[350px]" v-for="(uneListeArtistes, categorie) in listeArtistesParCategorie" :key="categorie">
+      <!-- <div class="pt-[223px] lg:pt-[350px]" v-for="(uneListeArtistes, categorie) in listeArtistesParCategorie" :key="categorie">
         <div class="flex gap-4">
           <h4 class="ml-6 font-lato text-[12px] text-Extended/true-gray/50 lg:text-xl">{{ categorie }}</h4>
           <Line class="mt-5" />
-        </div>
-        <!-- Format Mobile -->
-        <div class="md:hidden">
+        </div> -->
+
+      <!-- Format Mobile -->
+
+      <!-- <div class="md:hidden">
           <div class="flex w-full snap-x gap-5 overflow-x-auto">
             <div class="shrink-0 snap-center first:pl-5 last:pr-5" v-for="artiste in uneListeArtistes" :key="artiste.id">
               <Vignette class="ml-4 shrink-0" :image="artiste.image" :nom="artiste.nom" :date="artiste.date" :lien="artiste.lien2" actif />
             </div>
           </div>
-        </div>
-        <!-- <div class="md:hidden">
+        </div> -->
+
+      <div class="pt-[223px] md:hidden">
         <div class="flex w-full snap-x gap-5 overflow-x-auto">
           <div class="shrink-0 snap-center first:pl-5 last:pr-5">
             <Vignette
@@ -126,10 +129,11 @@
             <Vignette class="ml-4 shrink-0" image="/images/prog_yuksek.webp" nom="Yuksek" date="Jeudi 7 juillet - 18h00 à 20h00" />
           </div>
         </div>
-      </div> -->
+      </div>
 
-        <!-- Format Desktop -->
-        <div class="hidden flex-col md:flex">
+      <!-- Format Desktop -->
+
+      <!-- <div class="hidden flex-col md:flex">
           <div class="mx-12 mt-5 mb-20 grid w-11/12 grid-cols-[repeat(auto-fit,minmax(300px,1fr))] items-center justify-between gap-7">
             <Vignette
               v-for="artiste in uneListeArtistes"
@@ -141,10 +145,10 @@
               actif
             />
           </div>
-        </div>
-      </div>
+        </div> -->
+      <!-- </div> -->
 
-      <!-- <div class="hidden flex-col md:flex">
+      <div class="hidden flex-col pt-[300px] md:flex">
         <div class="mx-12 mt-20 mb-20 grid w-11/12 grid-cols-[repeat(auto-fit,minmax(300px,1fr))] items-center justify-between gap-7">
           <RouterLink to="/concertMG">
             <Vignette image="/images/prog_dmg.webp" nom="Martin Garrix" date="Samedi 9 juillet - 23h30 à 3h00" />
@@ -192,7 +196,7 @@
           <Vignette image="/images/prog_durt.webp" nom="U.R.TRAX" date="Vendredi 8 juillet - 18h00 à 20h00" />
           <Vignette image="/images/prog_dy.webp" nom="Yuksek" date="Jeudi 7 juillet - 18h00 à 20h00" />
         </div>
-      </div> -->
+      </div>
     </main>
     <footer class="bg-Extended/true-gray/900">
       <Footer />
